@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.buildmate.in/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.buildmate.in/about</loc><priority>0.8</priority></url>
+  <url><loc>https://www.buildmate.in/products</loc><priority>0.9</priority></url>
+  <url><loc>https://www.buildmate.in/services</loc><priority>0.8</priority></url>
+  <url><loc>https://www.buildmate.in/facilities</loc><priority>0.7</priority></url>
+  <url><loc>https://www.buildmate.in/news</loc><priority>0.7</priority></url>
+  <url><loc>https://www.buildmate.in/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://www.buildmate.in/partner</loc><priority>0.6</priority></url>
+  <url><loc>https://www.buildmate.in/contact</loc><priority>0.8</priority></url>
+</urlset>
