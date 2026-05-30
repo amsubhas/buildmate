@@ -274,7 +274,7 @@ function AdvantagesSection() {
           {ADVANTAGES.map(a => (
             <motion.div key={a.title} variants={FV}
               className="group bg-navy-800 rounded-2xl overflow-hidden border border-white/5 hover:border-accent/30 transition-all duration-300">
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden relative">
                 <img src={a.img} alt={a.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
                   onError={e => { e.target.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=60'; e.target.style.opacity='0.4' }}/>
@@ -374,7 +374,7 @@ function AACSection() {
           {usps.map(u => (
             <motion.div key={u.title} variants={FV}
               className="group bg-navy-800 rounded-xl overflow-hidden border border-white/5 card-hover">
-              <div className="h-44 overflow-hidden">
+              <div className="h-44 overflow-hidden relative">
                 <img src={u.img} alt={u.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-75"
                   onError={e => { e.target.style.opacity='0.2' }}/>

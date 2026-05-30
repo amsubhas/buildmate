@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Users, Cpu, Award, TrendingUp } from 'lucide-react'
+import { ArrowRight, Users, Cpu, Award, TrendingUp, Globe } from 'lucide-react'
 
 const FV = { hidden:{opacity:0,y:30}, visible:{opacity:1,y:0,transition:{duration:0.6}} }
 const SC = { hidden:{}, visible:{transition:{staggerChildren:0.1}} }
