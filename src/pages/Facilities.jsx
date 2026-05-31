@@ -7,22 +7,22 @@ const SC = { hidden:{}, visible:{transition:{staggerChildren:0.1}} }
 const VP = { once:true, margin:'-80px' }
 
 const facilities = [
-  { title:'Manufacturing Units', img:'https://www.buildmate.in/images/meti_mfg.jpg',
+  { title:'Manufacturing Units', img:'/images/meti_mfg.jpg',
     desc:'Our main manufacturing facility at Gundlapochampally, Hyderabad spans 50,000+ sq.ft. with heavy fabrication bays, structural workshops, assembly areas and quality inspection zones capable of handling large-format industrial equipment.',
     specs:['50,000+ sq.ft. area','Heavy structural fabrication','Multi-ton overhead cranes','Precision assembly halls','Dedicated finishing lines'] },
-  { title:'CNC Machining Centre', img:'https://www.buildmate.in/images/sup_design.jpg',
+  { title:'CNC Machining Centre', img:'/images/sup_design.jpg',
     desc:'State-of-the-art CNC machining and precision fabrication centre with advanced multi-axis turning, milling, drilling and laser cutting equipment for exact-tolerance components.',
     specs:['Multi-axis CNC turning','Precision milling centres','CNC laser cutting','CMM inspection','Tight tolerance machining'] },
-  { title:'QA & Testing Systems', img:'https://www.buildmate.in/images/imm_quality.jpg',
+  { title:'QA & Testing Systems', img:'/images/imm_quality.jpg',
     desc:'ISO 9001:2015 certified quality management. Comprehensive material testing, weld inspection (NDT), dimensional verification and performance validation systems.',
     specs:['ISO 9001:2015 certified','Material testing lab','NDT weld inspection','Dimensional metrology','100% pre-dispatch test'] },
-  { title:'R&D Laboratory', img:'https://www.buildmate.in/images/aacblock_seven_one.jpg',
+  { title:'R&D Laboratory', img:'/images/aacblock_seven_one.jpg',
     desc:'Dedicated research and development laboratory for AAC product innovation, process optimisation, raw material development and next-generation automation technology research.',
     specs:['AAC process simulation','Material formulation testing','Autoclave research','Automation prototyping','New product development'] },
-  { title:'Assembly & Pre-Commissioning', img:'https://www.buildmate.in/images/1_prod_aac_plant.png',
+  { title:'Assembly & Pre-Commissioning', img:'/images/1_prod_aac_plant.png',
     desc:'Full plant mock-up and pre-dispatch assembly facility. Complete factory acceptance tests (FAT), system integration verification and training runs before delivery to client sites.',
     specs:['Full plant pre-assembly','System integration test','FAT facilities','Pre-dispatch inspection','Customer witnessing'] },
-  { title:'Automation & Controls Division', img:'https://www.buildmate.in/images/9_prod_pre_engineered_buildings.png',
+  { title:'Automation & Controls Division', img:'/images/9_prod_pre_engineered_buildings.png',
     desc:'Dedicated automation engineering with in-house PLC/SCADA programming, control panel fabrication, field instrumentation design and Industry 4.0 IoT integration.',
     specs:['PLC/SCADA programming','Control panel fabrication','IoT & cloud integration','Remote monitoring setup','HMI screen development'] },
 ]
@@ -32,7 +32,7 @@ export default function Facilities() {
     <div>
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage:"url('https://www.buildmate.in/images/meti_mfg.jpg')" }}/>
+          style={{ backgroundImage:"url('/images/meti_mfg.jpg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Facilities</p>

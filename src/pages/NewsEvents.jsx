@@ -10,63 +10,63 @@ const events = [
     type:'Exhibition', status:'Upcoming',
     title:'EXCON 13th Edition 2025',
     date:'09–13 December 2025', location:'Bengaluru, Karnataka, India',
-    img:'https://www.buildmate.in/images/Excon_13th_edition.jpg',
+    img:'/images/Excon_13th_edition.jpg',
     desc:"Buildmate will participate at EXCON 2025 — India's largest construction equipment exhibition. Visit us to see our latest AAC Plant technology, concrete batching systems and automation solutions."
   },
   {
     type:'Conference', status:'Past',
     title:'Fly Ash Utilisation Conference 2024',
     date:'22–24 February 2024', location:'Goa, India',
-    img:'https://www.buildmate.in/images/fly_ash_utilisation_conference_2024.jpg',
+    img:'/images/fly_ash_utilisation_conference_2024.jpg',
     desc:'Buildmate presented innovations in fly ash utilisation for AAC and FCB manufacturing. Key insights on sustainable building material production from fly ash waste.'
   },
   {
     type:'Trade Show', status:'Past',
     title:'World of Concrete 2024',
     date:'23–25 January 2024', location:'Las Vegas, Nevada, USA',
-    img:'https://www.buildmate.in/images/World_of_concrete_2024.jpg',
+    img:'/images/World_of_concrete_2024.jpg',
     desc:'International participation at World of Concrete 2024 — engaging with global concrete industry leaders on advanced batching plant technology and precast solutions.'
   },
   {
     type:'Exhibition', status:'Past',
     title:'EXCON 2023 — 12th Edition',
     date:'12–16 December 2023', location:'Bengaluru, Karnataka, India',
-    img:'https://www.buildmate.in/images/Excon_13th_edition.jpg',
+    img:'/images/Excon_13th_edition.jpg',
     desc:'Buildmate showcased the full product lineup including AAC Plants, Concrete Batching Plants, Block Plants and material handling equipment to thousands of industry visitors.'
   },
   {
     type:'Exhibition', status:'Past',
     title:'Bombay Exhibition Center',
     date:'18–20 October 2023', location:'Mumbai, Maharashtra, India',
-    img:'https://www.buildmate.in/images/fly_ash_utilisation_conference_2024.jpg',
+    img:'/images/fly_ash_utilisation_conference_2024.jpg',
     desc:"Participation at the Bombay Exhibition Center construction event showcasing Buildmate's latest innovations in industrial plant manufacturing and automation technology."
   },
   {
     type:'Trade Show', status:'Past',
     title:'Gujarat Conex 2023',
     date:'21–23 September 2023', location:'Gujarat, India',
-    img:'https://www.buildmate.in/images/World_of_concrete_2024.jpg',
+    img:'/images/World_of_concrete_2024.jpg',
     desc:'Buildmate at Gujarat Conex — demonstrating concrete production solutions, batching plants and mixer technology for the rapidly growing Gujarat construction market.'
   },
   {
     type:'Exhibition', status:'Past',
     title:'Bauma Conexpo India 2023',
     date:'31 Jan – 3 Feb 2023', location:'Greater Noida, Delhi NCR, India',
-    img:'https://www.buildmate.in/images/Excon_13th_edition.jpg',
+    img:'/images/Excon_13th_edition.jpg',
     desc:"Major presence at Bauma Conexpo India showcasing Buildmate's complete range of AAC plants, crushing, batching and precast solutions to pan-India audience."
   },
   {
     type:'Exhibition', status:'Past',
     title:'EXCON 2022 — 11th Edition',
     date:'17–21 May 2022', location:'Bengaluru, Karnataka, India',
-    img:'https://www.buildmate.in/images/fly_ash_utilisation_conference_2024.jpg',
+    img:'/images/fly_ash_utilisation_conference_2024.jpg',
     desc:"Buildmate's participation at EXCON 2022 highlighted energy-efficient AAC plant technology and sustainable building material manufacturing equipment."
   },
   {
     type:'Exhibition', status:'Past',
     title:'EXCON 2019 — 10th Edition',
     date:'11–14 December 2019', location:'Bengaluru, Karnataka, India',
-    img:'https://www.buildmate.in/images/Excon_13th_edition.jpg',
+    img:'/images/Excon_13th_edition.jpg',
     desc:'Buildmate celebrated its 10th EXCON participation showcasing three decades of AAC plant manufacturing heritage and engineering innovation.'
   },
 ]
@@ -78,7 +78,7 @@ export default function NewsEvents() {
     <div>
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage:"url('https://www.buildmate.in/images/Excon_13th_edition.jpg')" }}/>
+          style={{ backgroundImage:"url('/images/Excon_13th_edition.jpg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">News & Events</p>

@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="https://www.buildmate.in/images/Buildmate_logo_rbg.png" alt="Buildmate"
+              <img src="/images/Buildmate_logo_rbg.png" alt="Buildmate"
                 className="h-12 w-auto object-contain" onError={e=>e.target.style.display='none'}/>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
