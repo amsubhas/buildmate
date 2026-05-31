@@ -31,7 +31,7 @@ export default function About() {
       {/* Banner */}
       <section className="relative py-28 bg-navy-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-25"
-          style={{ backgroundImage:"url('/images/banner_whoweare.jpg')" }}/>
+          style={{ backgroundImage:"url('https://buildmate.in/images/banner_whoweare.jpg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Who We Are</p>
@@ -121,9 +121,9 @@ export default function About() {
           </motion.div>
           <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-7" variants={SC} initial="hidden" whileInView="visible" viewport={VP}>
             {[
-              { title:'Superior Design', img:'/images/sup_design.jpg', desc:'Every plant is engineered from first principles. Optimised layouts, energy-efficient process flows and future-ready automation architecture. 3D modelling and simulation before fabrication.' },
-              { title:'Meticulous Manufacturing', img:'/images/meti_mfg.jpg', desc:'In-house CNC machining, precision fabrication and rigorously tested sub-assemblies ensure zero-compromise quality at every stage — from raw material to finished equipment.' },
-              { title:'Immaculate Quality', img:'/images/imm_quality.jpg', desc:'ISO 9001:2015 certified quality management. 100% pre-dispatch inspection, factory acceptance tests and on-site commissioning validation. Quality documented at every step.' },
+              { title:'Superior Design', img:'https://buildmate.in/images/sup_design.jpg', desc:'Every plant is engineered from first principles. Optimised layouts, energy-efficient process flows and future-ready automation architecture. 3D modelling and simulation before fabrication.' },
+              { title:'Meticulous Manufacturing', img:'https://buildmate.in/images/meti_mfg.jpg', desc:'In-house CNC machining, precision fabrication and rigorously tested sub-assemblies ensure zero-compromise quality at every stage — from raw material to finished equipment.' },
+              { title:'Immaculate Quality', img:'https://buildmate.in/images/imm_quality.jpg', desc:'ISO 9001:2015 certified quality management. 100% pre-dispatch inspection, factory acceptance tests and on-site commissioning validation. Quality documented at every step.' },
             ].map(a => (
               <motion.div key={a.title} variants={FV}
                 className="group bg-navy-800 rounded-2xl overflow-hidden border border-white/5 hover:border-accent/30 transition-all duration-300">

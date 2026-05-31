@@ -217,25 +217,25 @@ function HeroSection() {
 }
 
 const SLIDES = [
-  { bg:'/images/1_aac_plants.jpg', tag:'AAC Block Plants', h1:'Accelerate Concept To Commissioning', sub:'Complete turnkey AAC Plant solutions. Industry-leading efficiency, quality and automation.' },
-  { bg:'/images/5_precast_concrete_plants.jpg', tag:'Precast Concrete Plants', h1:'Focus On Quality & Innovation', sub:'Precision precast engineering for modern infrastructure — from facades to structural elements.' },
-  { bg:'/images/calcium-silicate_fiber-boards.png', tag:'Calcium Silicate / Fiber Boards', h1:'Cutting-Edge Board Manufacturing', sub:'High-performance Calcium Silicate and Fibre Cement Board plant solutions for modern construction.' },
-  { bg:'/images/High-End-Automated-Fly-ash-brick.png', tag:'High-End Automated Fly Ash Bricks', h1:'Most Environment Friendly & Sustainable Solutions', sub:'Automated fly ash brick manufacturing — turning industrial waste into high-strength, eco-friendly products.' },
-  { bg:'/images/6_concrete_block_plants.jpg', tag:'Concrete Block Plants', h1:'Complete Block Manufacturing Systems', sub:'High-speed vibro-press block plants for hollow, solid and paving applications.' },
-  { bg:'/images/8_mixers.jpg', tag:'Industrial Mixers', h1:'Heavy-Duty Mixing Excellence', sub:'Planetary, twin-shaft and pan mixers engineered for AAC slurry, concrete and mortar applications.' },
+  { bg:'https://buildmate.in/images/1_aac_plants.jpg', tag:'AAC Block Plants', h1:'Accelerate Concept To Commissioning', sub:'Complete turnkey AAC Plant solutions. Industry-leading efficiency, quality and automation.' },
+  { bg:'https://buildmate.in/images/5_precast_concrete_plants.jpg', tag:'Precast Concrete Plants', h1:'Focus On Quality & Innovation', sub:'Precision precast engineering for modern infrastructure — from facades to structural elements.' },
+  { bg:'https://buildmate.in/images/calcium-silicate_fiber-boards.png', tag:'Calcium Silicate / Fiber Boards', h1:'Cutting-Edge Board Manufacturing', sub:'High-performance Calcium Silicate and Fibre Cement Board plant solutions for modern construction.' },
+  { bg:'https://buildmate.in/images/High-End-Automated-Fly-ash-brick.png', tag:'High-End Automated Fly Ash Bricks', h1:'Most Environment Friendly & Sustainable Solutions', sub:'Automated fly ash brick manufacturing — turning industrial waste into high-strength, eco-friendly products.' },
+  { bg:'https://buildmate.in/images/6_concrete_block_plants.jpg', tag:'Concrete Block Plants', h1:'Complete Block Manufacturing Systems', sub:'High-speed vibro-press block plants for hollow, solid and paving applications.' },
+  { bg:'https://buildmate.in/images/8_mixers.jpg', tag:'Industrial Mixers', h1:'Heavy-Duty Mixing Excellence', sub:'Planetary, twin-shaft and pan mixers engineered for AAC slurry, concrete and mortar applications.' },
 ]
 
 const PRODUCTS = [
-  { id:'aac',    name:'AAC Plants',                img:'/images/1_prod_aac_plant.png',                    desc:'Fully automated Autoclaved Aerated Concrete plants — 30K to 300K m³/yr' },
-  { id:'crush',  name:'Stone Crushing Plants',      img:'/images/2_prod_crushers_plant.png',              desc:'Heavy-duty crushing and screening systems for aggregates and quarrying' },
-  { id:'batch',  name:'Concrete Batching Plants',   img:'/images/3_prod_concrete-batching-plants.png',   desc:'High-output ready-mix and site batching plants with advanced controls' },
-  { id:'drymix', name:'Dry Mix Mortar Plants',      img:'/images/4_prod_dry_mix_mortar_plants.png',      desc:'Automated tile adhesive, plastering and grouting mortar production lines' },
-  { id:'precast',name:'Precast Concrete Plants',    img:'/images/5_prod_precast_concrete_plants.png',    desc:'Precision precast element manufacturing for structural and facade applications' },
-  { id:'block',  name:'Concrete Block Plants',      img:'/images/6_prod_concrete-block-plants.png',     desc:'High-speed vibro-press block and brick production — hollow, solid, paver' },
-  { id:'cranes', name:'Cranes',                    img:'/images/7_prod_cranes.png',                     desc:'EOT, HOT, gantry and jib cranes for industrial plant material handling' },
-  { id:'mixers', name:'Mixers',                    img:'/images/8_prod_mixers.png',                     desc:'Twin-shaft, planetary and pan mixers for concrete, AAC slurry and mortar' },
-  { id:'peb',    name:'PEB (Pre Eng. Buildings)',  img:'/images/9_prod_pre_engineered_buildings.png',   desc:'Pre-Engineered Building steel structures for rapid industrial deployment' },
-  { id:'special',name:'Special Projects',           img:'/images/10_prod_special_projects.png',          desc:'Bespoke plant solutions and custom industrial engineering for unique requirements' },
+  { id:'aac',    name:'AAC Plants',                img:'https://buildmate.in/images/1_prod_aac_plant.png',                    desc:'Fully automated Autoclaved Aerated Concrete plants — 30K to 300K m³/yr' },
+  { id:'crush',  name:'Stone Crushing Plants',      img:'https://buildmate.in/images/2_prod_crushers_plant.png',              desc:'Heavy-duty crushing and screening systems for aggregates and quarrying' },
+  { id:'batch',  name:'Concrete Batching Plants',   img:'https://buildmate.in/images/3_prod_concrete-batching-plants.png',   desc:'High-output ready-mix and site batching plants with advanced controls' },
+  { id:'drymix', name:'Dry Mix Mortar Plants',      img:'https://buildmate.in/images/4_prod_dry_mix_mortar_plants.png',      desc:'Automated tile adhesive, plastering and grouting mortar production lines' },
+  { id:'precast',name:'Precast Concrete Plants',    img:'https://buildmate.in/images/5_prod_precast_concrete_plants.png',    desc:'Precision precast element manufacturing for structural and facade applications' },
+  { id:'block',  name:'Concrete Block Plants',      img:'https://buildmate.in/images/6_prod_concrete-block-plants.png',     desc:'High-speed vibro-press block and brick production — hollow, solid, paver' },
+  { id:'cranes', name:'Cranes',                    img:'https://buildmate.in/images/7_prod_cranes.png',                     desc:'EOT, HOT, gantry and jib cranes for industrial plant material handling' },
+  { id:'mixers', name:'Mixers',                    img:'https://buildmate.in/images/8_prod_mixers.png',                     desc:'Twin-shaft, planetary and pan mixers for concrete, AAC slurry and mortar' },
+  { id:'peb',    name:'PEB (Pre Eng. Buildings)',  img:'https://buildmate.in/images/9_prod_pre_engineered_buildings.png',   desc:'Pre-Engineered Building steel structures for rapid industrial deployment' },
+  { id:'special',name:'Special Projects',           img:'https://buildmate.in/images/10_prod_special_projects.png',          desc:'Bespoke plant solutions and custom industrial engineering for unique requirements' },
 ]
 
 const WHY = [
@@ -248,9 +248,9 @@ const WHY = [
 ]
 
 const ADVANTAGES = [
-  { title:'Superior Design', img:'/images/sup_design.jpg', desc:'Every plant is engineered from first principles — optimised layouts, energy-efficient process flows and future-ready automation architecture.' },
-  { title:'Meticulous Manufacturing', img:'/images/meti_mfg.jpg', desc:'In-house CNC machining, precision fabrication and rigorously tested sub-assemblies ensure zero-compromise quality before dispatch.' },
-  { title:'Immaculate Quality', img:'/images/imm_quality.jpg', desc:'ISO 9001:2015 certified quality systems with 100% pre-dispatch inspection, factory acceptance tests and on-site commissioning validation.' },
+  { title:'Superior Design', img:'https://buildmate.in/images/sup_design.jpg', desc:'Every plant is engineered from first principles — optimised layouts, energy-efficient process flows and future-ready automation architecture.' },
+  { title:'Meticulous Manufacturing', img:'https://buildmate.in/images/meti_mfg.jpg', desc:'In-house CNC machining, precision fabrication and rigorously tested sub-assemblies ensure zero-compromise quality before dispatch.' },
+  { title:'Immaculate Quality', img:'https://buildmate.in/images/imm_quality.jpg', desc:'ISO 9001:2015 certified quality systems with 100% pre-dispatch inspection, factory acceptance tests and on-site commissioning validation.' },
 ]
 
 const SERVICES_PREVIEW = [
@@ -271,12 +271,12 @@ const STATS = [
 
 // Real testimonials with live-site logo images
 const TESTIMONIALS = [
-  { logo:'/images/saudiaac.png', company:'Saudi AAC Blocks', text:'Buildmate commissioned AAC plants at our factory which have advanced technology processes resulting in high quality AAC blocks.' },
-  { logo:'/images/ecorex.png',   company:'Ecorex',           text:'Technology, experience and reliability are the core of a concrete batching plant. A solid basis for a long-lasting partnership.' },
-  { logo:'/images/elite.png',    company:'Elite',            text:'High quality standards, regular interaction and prompt solutions. We are proud to be associated with Buildmate.' },
-  { logo:'/images/eko.png',      company:'Eko',             text:"Buildmate's advanced technology allows complete solutions to ensure highly efficient and optimised processes with consistent final product quality." },
-  { logo:'/images/rancare.png',  company:'RanCare',          text:'One of the keys to increase productivity and quality is continuous training of the machine and maintenance personnel.' },
-  { logo:'/images/duralite.png', company:'Duralite',         text:'Designed according to our specific requirements. Our experience confirms that such indigenous solutions strengthen our market position.' },
+  { logo:'https://buildmate.in/images/saudiaac.png', company:'Saudi AAC Blocks', text:'Buildmate commissioned AAC plants at our factory which have advanced technology processes resulting in high quality AAC blocks.' },
+  { logo:'https://buildmate.in/images/ecorex.png',   company:'Ecorex',           text:'Technology, experience and reliability are the core of a concrete batching plant. A solid basis for a long-lasting partnership.' },
+  { logo:'https://buildmate.in/images/elite.png',    company:'Elite',            text:'High quality standards, regular interaction and prompt solutions. We are proud to be associated with Buildmate.' },
+  { logo:'https://buildmate.in/images/eko.png',      company:'Eko',             text:"Buildmate's advanced technology allows complete solutions to ensure highly efficient and optimised processes with consistent final product quality." },
+  { logo:'https://buildmate.in/images/rancare.png',  company:'RanCare',          text:'One of the keys to increase productivity and quality is continuous training of the machine and maintenance personnel.' },
+  { logo:'https://buildmate.in/images/duralite.png', company:'Duralite',         text:'Designed according to our specific requirements. Our experience confirms that such indigenous solutions strengthen our market position.' },
 ]
 
 // Real client logos from live site
@@ -287,9 +287,9 @@ const CLIENT_LOGOS = [
 ]
 
 const NEWS_ITEMS = [
-  { cat:'Exhibition', title:'EXCON 13th Edition 2025', date:'09–13 Dec 2025', location:'Bengaluru', img:'/images/Excon_13th_edition.jpg', status:'Upcoming' },
-  { cat:'Conference', title:'Fly Ash Utilisation Conference 2024', date:'22–24 Feb 2024', location:'Goa', img:'/images/fly_ash_utilisation_conference_2024.jpg', status:'Past' },
-  { cat:'Trade Show', title:'World of Concrete 2024', date:'23–25 Jan 2024', location:'Las Vegas, USA', img:'/images/World_of_concrete_2024.jpg', status:'Past' },
+  { cat:'Exhibition', title:'EXCON 13th Edition 2025', date:'09–13 Dec 2025', location:'Bengaluru', img:'https://buildmate.in/images/Excon_13th_edition.jpg', status:'Upcoming' },
+  { cat:'Conference', title:'Fly Ash Utilisation Conference 2024', date:'22–24 Feb 2024', location:'Goa', img:'https://buildmate.in/images/fly_ash_utilisation_conference_2024.jpg', status:'Past' },
+  { cat:'Trade Show', title:'World of Concrete 2024', date:'23–25 Jan 2024', location:'Las Vegas, USA', img:'https://buildmate.in/images/World_of_concrete_2024.jpg', status:'Past' },
 ]
 
 
@@ -310,7 +310,7 @@ function ProductsSection() {
               <div className="h-36 overflow-hidden bg-navy-700">
                 <img src={p.img} alt={p.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
-                  onError={e => { e.target.style.opacity='0.3' }}/>
+                  onError={e => { const f=e.target.src; if(!f.includes('buildmate.in')){e.target.src=f.replace('/images/','https://buildmate.in/images/')}else{e.target.style.opacity='0.3'} }}/>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-800 via-navy-800/50 to-transparent"/>
               </div>
               <div className="p-3 relative z-10">
@@ -366,7 +366,7 @@ function AboutSection() {
           </motion.div>
           <motion.div className="relative" initial={{ opacity:0 }} whileInView={{ opacity:1 }} viewport={VP} transition={{ duration:0.9 }}>
             <div className="rounded-xl overflow-hidden border border-white/10">
-              <img src="/images/banner_whoweare.jpg" alt="Buildmate Engineering"
+              <img src="https://buildmate.in/images/banner_whoweare.jpg" alt="Buildmate Engineering"
                 className="w-full h-[400px] object-cover opacity-80"
                 onError={e => { e.target.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80'; e.target.style.opacity='0.6' }}/>
             </div>
@@ -504,10 +504,10 @@ function GlobalSection() {
 // ── AAC USP SECTION (from live site "7 reasons why AAC") ──────────
 function AACSection() {
   const usps = [
-    { img:'/images/aacblock_seven_one.jpg',   title:'Light Weight',         desc:'3-4x lighter than red bricks — reduces dead load on structure and foundation costs.' },
-    { img:'/images/aacblock_seven_two.jpg',   title:'Thermal Insulation',   desc:'Excellent thermal performance — reduces HVAC loads and energy consumption significantly.' },
-    { img:'/images/aacblock_seven_three.jpg', title:'Fire Resistance',      desc:'Class A1 non-combustible. 4-hour fire rating for walls — meets all international safety standards.' },
-    { img:'/images/aacblock_seven_four.jpg',  title:'Sound Insulation',     desc:'High STC ratings reduce sound transmission — ideal for residential, hospitality and commercial.' },
+    { img:'https://buildmate.in/images/aacblock_seven_one.jpg',   title:'Light Weight',         desc:'3-4x lighter than red bricks — reduces dead load on structure and foundation costs.' },
+    { img:'https://buildmate.in/images/aacblock_seven_two.jpg',   title:'Thermal Insulation',   desc:'Excellent thermal performance — reduces HVAC loads and energy consumption significantly.' },
+    { img:'https://buildmate.in/images/aacblock_seven_three.jpg', title:'Fire Resistance',      desc:'Class A1 non-combustible. 4-hour fire rating for walls — meets all international safety standards.' },
+    { img:'https://buildmate.in/images/aacblock_seven_four.jpg',  title:'Sound Insulation',     desc:'High STC ratings reduce sound transmission — ideal for residential, hospitality and commercial.' },
   ]
   return (
     <section className="py-20 bg-navy-950">
@@ -524,7 +524,7 @@ function AACSection() {
               <div className="h-44 overflow-hidden">
                 <img src={u.img} alt={u.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-75"
-                  onError={e => { e.target.style.opacity='0.2' }}/>
+                  onError={e => { const f=e.target.src; if(!f.includes('buildmate.in')){e.target.src=f.replace('/images/','https://buildmate.in/images/')}else{e.target.style.opacity='0.2'} }}/>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-800/80 to-transparent"/>
               </div>
               <div className="p-5">
@@ -960,7 +960,7 @@ function ProvenExecutionSection() {
   const projects = [
     {
       client:'UltraTech Cement',
-      logo:'/images/ultratech.png',
+      logo:'https://buildmate.in/images/ultratech.png',
       type:'AAC Block Plant',
       location:'Multiple — Pan India',
       capacity:'500 m³/day each',
@@ -970,7 +970,7 @@ function ProvenExecutionSection() {
     },
     {
       client:'Saudi AAC Blocks',
-      logo:'/images/saudiaac.png',
+      logo:'https://buildmate.in/images/saudiaac.png',
       type:'AAC Manufacturing Plant',
       location:'Riyadh, Saudi Arabia',
       capacity:'500 m³/day',
@@ -980,7 +980,7 @@ function ProvenExecutionSection() {
     },
     {
       client:'EKO Blocks',
-      logo:'/images/eko.png',
+      logo:'https://buildmate.in/images/eko.png',
       type:'AAC Block Plant',
       location:'Bengaluru, Karnataka',
       capacity:'200 m³/day',
