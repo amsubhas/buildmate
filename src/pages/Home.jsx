@@ -93,7 +93,7 @@ function HeroSection() {
       {/* Parallax background image */}
       <AnimatePresence mode="wait">
         <motion.div key={cur}
-          style={{ y: bgY, backgroundImage:`url('${s.bg}')` }}
+          style={{ y: bgY, backgroundImage:`url("${s.bg}")` }}
           initial={{ opacity:0, scale:1.06 }}
           animate={{ opacity:1, scale:1 }}
           exit={{ opacity:0 }}
@@ -309,7 +309,7 @@ function ProductsSection() {
               <div className="h-36 overflow-hidden bg-navy-700">
                 <img src={p.img} alt={p.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
-                  onError={e => { const f=e.target.src; if(!f.includes('buildmate.in')){e.target.src=f.replace('/images/','/images/')}else{e.target.style.opacity='0.3'} }}/>
+                  onError={e => { e.target.style.opacity='0.3' }}/>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-800 via-navy-800/50 to-transparent"/>
               </div>
               <div className="p-3 relative z-10">
@@ -523,7 +523,7 @@ function AACSection() {
               <div className="h-44 overflow-hidden">
                 <img src={u.img} alt={u.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-75"
-                  onError={e => { const f=e.target.src; if(!f.includes('buildmate.in')){e.target.src=f.replace('/images/','/images/')}else{e.target.style.opacity='0.2'} }}/>
+                  onError={e => { e.target.style.opacity='0.2' }}/>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-800/80 to-transparent"/>
               </div>
               <div className="p-5">
