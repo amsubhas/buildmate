@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 
-const CDN_BASE = 'https://buildmate.in/images'
+const CDN_BASE = 'https://www.buildmate.in/images'
 
-// Given any /images/<file> src, return the buildmate.in CDN version
-function cdnSrc(src) {
+// If src is a local /images/... path, convert to www CDN URL
+function toCdn(src) {
   if (!src) return src
   const match = src.match(/\/images\/(.+)$/)
   if (match) return `${CDN_BASE}/${match[1]}`
@@ -27,12 +27,14 @@ export default function LazyImg({ src, alt, className, fallbackSrc, style, ...pr
 
   // Fallback chain: src → CDN version → fallbackSrc → Unsplash placeholder
   let actualSrc = src
-  if (errorCount === 1) actualSrc = cdnSrc(src) !== src ? cdnSrc(src) : (fallbackSrc || 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=60')
+  if (errorCount === 1) {
+    const cdn = toCdn(src)
+    actualSrc = cdn !== src ? cdn : (fallbackSrc || 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=60')
+  }
   if (errorCount >= 2) actualSrc = fallbackSrc || 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=60'
 
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className || ''}`} style={style}>
-      {/* Skeleton */}
       {!loaded && (
         <div className="absolute inset-0 skeleton"/>
       )}

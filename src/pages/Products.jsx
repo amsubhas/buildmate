@@ -16,7 +16,7 @@ function AACSisterBanner() {
     <motion.div variants={FV} initial="hidden" whileInView="visible" viewport={VP}
       className="mb-12 relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-r from-navy-800 via-navy-700 to-navy-800">
       <div className="absolute inset-0 opacity-10 bg-cover bg-center"
-        style={{ backgroundImage:"url('https://buildmate.in/images/1_prod_aac_plant.png')" }}/>
+        style={{ backgroundImage:"url('https://www.buildmate.in/images/1_prod_aac_plant.png')" }}/>
       <div className="absolute inset-0 bg-gradient-to-r from-navy-900/80 to-transparent"/>
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 p-8">
         <div>
@@ -154,7 +154,7 @@ function ProductCard({ p, index }) {
 const CLIENT_BRIEF_PRODUCTS = [
   {
     id:'aac', name:'AAC Plants', tag:'Autoclaved Aerated Concrete', badge:'Flagship',
-    img:'https://buildmate.in/images/1_prod_aac_plant.png',
+    img:'https://www.buildmate.in/images/1_prod_aac_plant.png',
     overview:"Complete Autoclaved Aerated Concrete (AAC) block manufacturing plants from 30,000 to 300,000 m³/year. Fully automated with proprietary autoclave and slurry preparation systems. India's leading AAC plant manufacturer since 1991.",
     features:['30K–300K m³/yr capacity','Fully automated PLC/SCADA','Proprietary autoclave design','Fly ash & sand-based processing','Energy-efficient steam curing','Complete turnkey delivery'],
     applications:['Residential construction','Commercial buildings','Green building projects','Affordable housing','Industrial facilities']
@@ -162,28 +162,28 @@ const CLIENT_BRIEF_PRODUCTS = [
   {
     id:'precast', name:'Precast Concrete Plants', tag:'Precast Solutions',
     subcats:['Precast Facades','Precast Walls','Structural Elements','Precast Slabs'],
-    img:'https://buildmate.in/images/5_prod_precast_concrete_plants.png',
+    img:'https://www.buildmate.in/images/5_prod_precast_concrete_plants.png',
     overview:'Complete precast concrete manufacturing facilities for facades, walls, structural elements and infrastructure components. Includes precision mold systems, vibration tables and steam curing chambers.',
     features:['Custom mold systems','High-pressure vibration','Steam curing chambers','Automated demoulding','Reinforcement handling','Precast facades & walls'],
     applications:['Building facades','Precast walls','Bridge elements','Tunnel segments','Structural slabs']
   },
   {
     id:'peb', name:'PEB (Pre-Engineered Buildings)', tag:'Steel Structures',
-    img:'https://buildmate.in/images/9_prod_pre_engineered_buildings.png',
+    img:'https://www.buildmate.in/images/9_prod_pre_engineered_buildings.png',
     overview:'Pre-Engineered Building steel manufacturing plants with roll-forming, welding and CNC cutting lines for rapid industrial and commercial structures.',
     features:['Custom section profiles','CNC roll-forming lines','Automatic welding systems','Coating & painting lines','Engineering design support','Fast delivery programs'],
     applications:['Industrial warehouses','Aircraft hangars','Sports facilities','Commercial buildings','Cold storage']
   },
   {
     id:'carbon', name:'Carbon Capture Plants', tag:'Sustainable Technology', badge:'Green',
-    img:'https://buildmate.in/images/calcium-silicate_fiber-boards.png',
+    img:'https://www.buildmate.in/images/calcium-silicate_fiber-boards.png',
     overview:'Next-generation CO₂ capture and utilisation systems integrated into industrial manufacturing processes. Converts carbon emissions into construction-grade materials, enabling net-zero production.',
     features:['CO₂ capture & utilisation','Industrial emission reduction','Construction material conversion','Net-zero manufacturing','ESG compliance ready','Modular integration design'],
     applications:['AAC & FCB plants','Cement industries','Power plant integration','Industrial emission control','Net-zero factories']
   },
   {
     id:'fcb', name:'FCB Plants', tag:'Fly Ash Calcium Brick',
-    img:'https://buildmate.in/images/High-End-Automated-Fly-ash-brick.png',
+    img:'https://www.buildmate.in/images/High-End-Automated-Fly-ash-brick.png',
     overview:'High-end automated Fly Ash Calcium Brick (FCB) manufacturing plants — converting industrial fly ash waste into high-strength, environmentally friendly building bricks at scale.',
     features:['Fly ash utilisation 60%+','High-strength output blocks','Fully automated pressing','Steam autoclave curing','Zero waste production','ISO quality standards'],
     applications:['High-strength bricks','Eco-friendly construction','Fly ash waste utilisation','Green building materials','Export markets']
@@ -193,49 +193,49 @@ const CLIENT_BRIEF_PRODUCTS = [
 const EXTRA_PRODUCTS = [
   {
     id:'crushing', name:'Stone Crushing Plants', tag:'Aggregate Processing',
-    img:'https://buildmate.in/images/2_prod_crushers_plant.png',
+    img:'https://www.buildmate.in/images/2_prod_crushers_plant.png',
     overview:'Heavy-duty rock and aggregate crushing systems for construction, mining and quarrying. Jaw, cone and VSI crushers with multi-stage screening.',
     features:['50–1000 TPH capacity','Jaw, Cone & VSI crushers','Multi-stage screening','Dust suppression systems','PLC automation'],
     applications:['Road construction','Concrete aggregate','Railway ballast','Building construction']
   },
   {
     id:'batching', name:'Concrete Batching Plants', tag:'Ready Mix',
-    img:'https://buildmate.in/images/3_prod_concrete-batching-plants.png',
+    img:'https://www.buildmate.in/images/3_prod_concrete-batching-plants.png',
     overview:'High-output ready-mix and site concrete batching plants with precise metering, automated material handling and advanced SCADA control.',
     features:['30–240 m³/hr output','Twin-shaft mixer','Automated aggregate feed','Cement & admixture batching','Remote monitoring'],
     applications:['Ready-mix concrete','Infrastructure','Dam construction','Precast production']
   },
   {
     id:'drymix', name:'Dry Mix Mortar Plants', tag:'Dry Mortar',
-    img:'https://buildmate.in/images/4_prod_dry_mix_mortar_plants.png',
+    img:'https://www.buildmate.in/images/4_prod_dry_mix_mortar_plants.png',
     overview:'Automated dry-mix mortar production for tile adhesives, wall plastering and grouting mortar. Advanced weighing and bagging systems.',
     features:['5–20 TPH production','Precision weighing','Automated silo filling','Bagging & bulk options','Full SCADA control'],
     applications:['Tile adhesives','Wall plaster','Joint fillers','Waterproofing']
   },
   {
     id:'block', name:'Concrete Block Plants', tag:'Block Manufacturing',
-    img:'https://buildmate.in/images/6_prod_concrete-block-plants.png',
+    img:'https://www.buildmate.in/images/6_prod_concrete-block-plants.png',
     overview:'High-speed concrete hollow block, solid block and paving brick manufacturing with vibro-press technology and automated curing rack systems.',
     features:['2000–10000 blocks/hr','Vibro-press technology','Automated curing racks','Multiple block formats','Paver capability'],
     applications:['Hollow blocks','Paving stones','Kerbstones','Solid bricks']
   },
   {
     id:'cranes', name:'Cranes', tag:'Material Handling',
-    img:'https://buildmate.in/images/7_prod_cranes.png',
+    img:'https://www.buildmate.in/images/7_prod_cranes.png',
     overview:'Industrial overhead, gantry and jib cranes for manufacturing plant operations and precision material handling.',
     features:['1T–100T capacity','EOT & HOT types','Radio remote control','Anti-collision systems','VFD drives'],
     applications:['Plant material handling','Precast operations','Steel fabrication','Heavy machinery']
   },
   {
     id:'mixers', name:'Mixers', tag:'Mixing Equipment',
-    img:'https://buildmate.in/images/8_prod_mixers.png',
+    img:'https://www.buildmate.in/images/8_prod_mixers.png',
     overview:'Heavy-duty planetary, twin-shaft and pan mixers for AAC slurry, concrete and specialty material production.',
     features:['0.5–6 m³ capacity','Twin-shaft & planetary','Wear-resistant liners','Quick discharge gate','Easy maintenance'],
     applications:['AAC slurry','Concrete mixing','Dry mortar','Industrial materials']
   },
   {
     id:'special', name:'Special Projects', tag:'Custom Engineering',
-    img:'https://buildmate.in/images/10_prod_special_projects.png',
+    img:'https://www.buildmate.in/images/10_prod_special_projects.png',
     overview:'Bespoke plant solutions including calcium silicate board plants, fibre cement board lines and custom industrial engineering.',
     features:['Calcium silicate board lines','Fibre cement board systems','Fire-rated panel production','Custom process engineering','Novel material solutions'],
     applications:['Board manufacturing','Novel building materials','Export markets','Custom requirements']
@@ -248,7 +248,7 @@ export default function Products() {
       {/* Banner */}
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage:"url('https://buildmate.in/images/1_aac_plants.jpg')" }}/>
+          style={{ backgroundImage:"url('https://www.buildmate.in/images/1_aac_plants.jpg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/50"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Products</p>

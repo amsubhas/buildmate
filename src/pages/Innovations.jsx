@@ -7,16 +7,16 @@ const SC = { hidden:{}, visible:{transition:{staggerChildren:0.1}} }
 const VP = { once:true, margin:'-80px' }
 
 const innovations = [
-  { icon:Cpu, title:'Smart Automation & IoT', img:'https://buildmate.in/images/9_prod_pre_engineered_buildings.png',
+  { icon:Cpu, title:'Smart Automation & IoT', img:'https://www.buildmate.in/images/9_prod_pre_engineered_buildings.png',
     desc:'Next-generation PLC/SCADA systems with IoT connectivity for real-time plant monitoring, predictive maintenance alerts and remote diagnostics. Full Industry 4.0 integration.',
     points:['Real-time production dashboards','Predictive maintenance AI','Remote diagnostics & control','Cloud data logging & analytics','Mobile plant monitoring app'] },
-  { icon:Leaf, title:'Sustainable Manufacturing', img:'https://buildmate.in/images/High-End-Automated-Fly-ash-brick.png',
+  { icon:Leaf, title:'Sustainable Manufacturing', img:'https://www.buildmate.in/images/High-End-Automated-Fly-ash-brick.png',
     desc:'Fly ash utilisation technology, carbon capture systems and energy-efficient autoclave designs that dramatically reduce the environmental footprint of building material manufacturing.',
     points:['Fly ash AAC & brick plants','Carbon capture integration','Steam energy recovery','Zero liquid discharge','Solar-ready plant designs'] },
-  { icon:Zap, title:'High-Efficiency Autoclave Technology', img:'https://buildmate.in/images/1_prod_aac_plant.png',
+  { icon:Zap, title:'High-Efficiency Autoclave Technology', img:'https://www.buildmate.in/images/1_prod_aac_plant.png',
     desc:'Proprietary autoclave design with superior insulation, optimised steam distribution and advanced pressure-temperature control — delivering consistent AAC block quality at lower energy consumption.',
     points:['Proprietary insulation design','Optimised steam distribution','Advanced PTC systems','15% lower energy vs industry','Extended autoclave lifecycle'] },
-  { icon:BarChart3, title:'Calcium Silicate & Fibre Board Plants', img:'https://buildmate.in/images/calcium-silicate_fiber-boards.png',
+  { icon:BarChart3, title:'Calcium Silicate & Fibre Board Plants', img:'https://www.buildmate.in/images/calcium-silicate_fiber-boards.png',
     desc:'Cutting-edge calcium silicate board and fibre cement board manufacturing plants — serving high-performance, fire-resistant building panel markets with fully automated production lines.',
     points:['Calcium silicate board lines','Fibre cement board systems','Fire-rated panel production','Automated sheet cutting','Quality testing integration'] },
 ]
@@ -26,7 +26,7 @@ export default function Innovations() {
     <div>
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage:"url('https://buildmate.in/images/9_prod_pre_engineered_buildings.png')" }}/>
+          style={{ backgroundImage:"url('https://www.buildmate.in/images/9_prod_pre_engineered_buildings.png')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Innovation</p>

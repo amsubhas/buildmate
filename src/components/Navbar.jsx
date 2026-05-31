@@ -142,7 +142,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 shrink-0 group" aria-label="Buildmate Home">
-          <img src="https://buildmate.in/images/Buildmate_logo_rbg.png" alt="Buildmate Logo"
+          <img src="https://www.buildmate.in/images/Buildmate_logo_rbg.png" alt="Buildmate Logo"
             className="h-10 w-auto object-contain transition-opacity group-hover:opacity-90"
             loading="eager"
             onError={e => {

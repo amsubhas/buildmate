@@ -13,7 +13,7 @@ const SERVICES = [
     id:'rd', num:'01', icon:FlaskConical, color:'from-accent/15',
     title:'Unique R&D',
     headline:'Proprietary Research & Development',
-    img:'https://buildmate.in/images/aacblock_seven_one.jpg',
+    img:'https://www.buildmate.in/images/aacblock_seven_one.jpg',
     desc:'Buildmate operates a dedicated in-house R&D division focused on advancing AAC block technology, optimising plant processes and developing new sustainable building material solutions. Our proprietary autoclave designs and fly ash formulations are outcomes of continuous R&D investment.',
     items:[
       'Proprietary AAC formulation research',
@@ -30,7 +30,7 @@ const SERVICES = [
     id:'amc', num:'02', icon:Wrench, color:'from-orange-500/15',
     title:'AMC / Support',
     headline:'Annual Maintenance Contracts & After-Sales Support',
-    img:'https://buildmate.in/images/meti_mfg.jpg',
+    img:'https://www.buildmate.in/images/meti_mfg.jpg',
     desc:'Comprehensive Annual Maintenance Contracts (AMC) ensuring maximum plant uptime and optimal performance. Our service teams provide 24x7 technical support, preventive maintenance schedules, breakdown response and spare parts supply for all Buildmate plants.',
     items:[
       'Annual Maintenance Contracts (AMC)',
@@ -47,7 +47,7 @@ const SERVICES = [
     id:'training', num:'03', icon:GraduationCap, color:'from-yellow-500/15',
     title:'Training',
     headline:'Operator & Management Training Programs',
-    img:'https://buildmate.in/images/imm_quality.jpg',
+    img:'https://www.buildmate.in/images/imm_quality.jpg',
     desc:'Structured training programs for plant operators, maintenance teams and management personnel. Our training ensures your team can run the plant at peak efficiency, maintain quality standards and handle operational challenges independently.',
     items:[
       'Plant operator certification programs',
@@ -64,7 +64,7 @@ const SERVICES = [
     id:'custom', num:'04', icon:Settings, color:'from-purple-500/15',
     title:'Custom Machinery',
     headline:'Bespoke Industrial Equipment Design & Manufacture',
-    img:'https://buildmate.in/images/sup_design.jpg',
+    img:'https://www.buildmate.in/images/sup_design.jpg',
     desc:'Buildmate designs and manufactures custom industrial machinery for unique manufacturing requirements that standard off-the-shelf solutions cannot address. From special autoclaves to custom mixing systems and bespoke material handling equipment.',
     items:[
       'Custom autoclave design & fabrication',
@@ -81,7 +81,7 @@ const SERVICES = [
     id:'upgradation', num:'05', icon:TrendingUp, color:'from-green-500/15',
     title:'Plant Upgradation',
     headline:'Capacity Expansion & Technology Upgradation',
-    img:'https://buildmate.in/images/1_prod_aac_plant.png',
+    img:'https://www.buildmate.in/images/1_prod_aac_plant.png',
     desc:'Upgrade existing manufacturing plants to increase production capacity, improve product quality or add new product lines. Our engineers assess your current plant, identify bottlenecks and design targeted upgradation packages.',
     items:[
       'Capacity expansion engineering',
@@ -98,7 +98,7 @@ const SERVICES = [
     id:'modernization', num:'06', icon:RefreshCw, color:'from-cyan-500/15',
     title:'Modernization',
     headline:'Industry 4.0 & Digital Modernization',
-    img:'https://buildmate.in/images/9_prod_pre_engineered_buildings.png',
+    img:'https://www.buildmate.in/images/9_prod_pre_engineered_buildings.png',
     desc:'Transform legacy manufacturing plants with Industry 4.0 technology — PLC/SCADA upgrades, IoT sensor integration, real-time monitoring dashboards and AI-based quality control. Keep your plant competitive without complete replacement.',
     items:[
       'PLC/SCADA system replacement',
@@ -119,7 +119,7 @@ export default function Services() {
       {/* Banner */}
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage:"url('https://buildmate.in/images/banner_services.jpg')" }}/>
+          style={{ backgroundImage:"url('https://www.buildmate.in/images/banner_services.jpg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Services</p>
@@ -151,7 +151,7 @@ export default function Services() {
               <div className={`lg:col-span-2 h-56 lg:h-auto overflow-hidden ${i % 2 === 1 ? 'lg:order-last' : ''}`}>
                 <img src={s.img} alt={s.title}
                   className="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-500"
-                  onError={e => { const f=e.target.src; if(!f.includes('buildmate.in')){e.target.src=f.replace(//images//,'https://buildmate.in/images/')}else{e.target.style.opacity='0.2'} }}/>
+                  onError={e => { const f=e.target.src; if(!f.includes('buildmate.in')){e.target.src=f.replace(//images//,'https://www.buildmate.in/images/')}else{e.target.style.opacity='0.2'} }}/>
               </div>
               {/* Content */}
               <div className="lg:col-span-3 p-8 flex flex-col justify-center">
