@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" width="180" height="48">
+  <defs>
+    <linearGradient id="sl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#233C82"/>
+      <stop offset="100%" style="stop-color:#D72D23"/>
+    </linearGradient>
+  </defs>
+  <!-- S symbol -->
+  <rect x="2" y="8" width="32" height="32" rx="6" fill="url(#sl)"/>
+  <text x="18" y="30" text-anchor="middle" font-family="Arial Black,sans-serif"
+    font-weight="900" font-size="18" fill="white">S</text>
+  <!-- Text -->
+  <text x="44" y="22" font-family="Arial,sans-serif" font-weight="700" font-size="13"
+    fill="white" letter-spacing="0.5">Sharva's IT</text>
+  <text x="44" y="36" font-family="Arial,sans-serif" font-size="8.5"
+    fill="rgba(255,255,255,0.5)" letter-spacing="1.5">TECHNOLOGY SOLUTIONS</text>
+</svg>

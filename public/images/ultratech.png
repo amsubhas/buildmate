@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <rect width="300" height="100" fill="#1a2f5e" rx="4"/>
+  <rect x="0" y="0" width="300" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="4"/>
+  <text x="150" y="55" text-anchor="middle" dominant-baseline="middle"
+    font-family="Arial Black, sans-serif" font-weight="900" font-size="24"
+    fill="rgba(255,255,255,0.5)" letter-spacing="2">U</text>
+  <text x="150" y="76" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" letter-spacing="2">ULTRATECH</text>
+</svg>

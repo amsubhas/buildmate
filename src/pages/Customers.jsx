@@ -33,7 +33,7 @@ export default function Customers() {
     <div>
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 opacity-15 bg-cover bg-center"
-          style={{ backgroundImage:"url('https://buildmate.in/images/banner_whoweare.jpg')" }}/>
+          style={{ backgroundImage:"url('/images/banner_whoweare.jpg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Customers</p>
@@ -54,7 +54,7 @@ export default function Customers() {
             {TESTIMONIALS.map(t => (
               <motion.div key={t.company} variants={FV}
                 className="aspect-[3/2] bg-navy-800 border border-white/5 rounded-xl flex items-center justify-center p-3 hover:border-accent/25 transition-all group">
-                <img src={`https://buildmate.in/images/${t.logo}.png`} alt={t.company}
+                <img src={`/images/${t.logo}.png`} alt={t.company}
                   className="max-w-full max-h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity"
                   onError={e => { e.target.style.display='none'; e.target.parentElement.innerHTML=`<span class="text-slate-400 text-xs font-display text-center uppercase tracking-wide">${t.company}</span>` }}/>
               </motion.div>
@@ -80,7 +80,7 @@ export default function Customers() {
                 <p className="text-slate-300 text-sm leading-relaxed italic flex-1">"{t.text}"</p>
                 <div className="flex items-center gap-3 pt-3 border-t border-white/5">
                   <div className="w-16 h-10 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-white/5 p-1">
-                    <img src={`https://buildmate.in/images/${t.logo}.png`} alt={t.company}
+                    <img src={`/images/${t.logo}.png`} alt={t.company}
                       className="max-w-full max-h-full object-contain opacity-80"
                       onError={e => { e.target.style.display='none' }}/>
                   </div>

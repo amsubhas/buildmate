@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
+import { scrollWithOffset } from '../utils/scroll'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { useState } from 'react'
 
@@ -12,7 +14,7 @@ const PRODUCTS = [
 const QUICK = [
   ['Home','/'],['Who We Are','/about'],['Products','/products'],['Services','/services'],
   ['Facilities','/facilities'],['Projects','/projects'],['Customers','/customers'],
-  ['News & Events','/news'],['Blog','/blog'],['Partner With Us','/partner'],
+  ['News & Events','/news'],['Blog','/blog'],['Partner With Us','/partner'],['AAC Plant Site','https://www.aacplantmanufacturers.com/'],
   ['Work With Us','/work-with-us'],['Contact Us','/contact'],
 ]
 
@@ -46,7 +48,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="https://buildmate.in/images/Buildmate_logo_rbg.png" alt="Buildmate"
+              <img src="/images/Buildmate_logo_rbg.png" alt="Buildmate"
                 className="h-12 w-auto object-contain" onError={e=>e.target.style.display='none'}/>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
@@ -155,12 +157,20 @@ export default function Footer() {
 
         <div className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 flex-wrap">
           <p>© 1991–2025 <strong className="text-slate-400">Buildmate Projects Pvt Ltd</strong>. All Rights Reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end">
             <Link to="/contact" className="hover:text-slate-400 transition-colors">Contact</Link>
             <Link to="/partner" className="hover:text-slate-400 transition-colors">Partner With Us</Link>
+            <span className="text-slate-700">|</span>
+            <a href="https://www.aacplantmanufacturers.com/" target="_blank" rel="noopener noreferrer"
+              className="text-slate-500 hover:text-accent transition-colors text-[11px] flex items-center gap-1">
+              🔗 aacplantmanufacturers.com
+            </a>
+            <span className="text-slate-700">|</span>
             <a href="https://sharvasit.in" target="_blank" rel="noopener noreferrer"
-              className="text-slate-700 hover:text-slate-500 transition-colors text-[11px]">
-              Website by Sharva's IT
+              className="flex items-center gap-2 opacity-30 hover:opacity-60 transition-opacity"
+              aria-label="Website by Sharva's IT">
+              <span className="text-slate-500 text-[10px] font-display uppercase tracking-wider">Crafted with care by</span>
+              <img src="/sharvasit-logo.svg" alt="Sharva's IT" className="h-5 w-auto object-contain" loading="lazy"/>
             </a>
           </div>
         </div>

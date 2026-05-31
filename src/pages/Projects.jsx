@@ -46,7 +46,7 @@ export default function Projects() {
     <div>
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 opacity-20 bg-cover bg-center"
-          style={{ backgroundImage:"url('https://buildmate.in/images/5_precast_concrete_plants.jpg')" }}/>
+          style={{ backgroundImage:"url('/images/5_precast_concrete_plants.jpg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Projects</p>
@@ -89,7 +89,7 @@ export default function Projects() {
                   <motion.div key={p.name} variants={FV}
                     className="flex items-center gap-4 p-4 bg-navy-800 rounded-xl border border-white/5 hover:border-accent/25 transition-all group">
                     <div className="w-14 h-10 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-white/5 group-hover:border-accent/20 transition-colors">
-                      <img src={`https://buildmate.in/images/${p.logo}.png`} alt={p.name}
+                      <img src={`/images/${p.logo}.png`} alt={p.name}
                         className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity p-1"
                         onError={e => { e.target.style.display='none' }}/>
                     </div>
@@ -144,7 +144,7 @@ export default function Projects() {
                   '9_prod_pre_engineered_buildings','10_prod_special_projects','aacblock_seven_one','aacblock_seven_two'].map(img => (
                   <motion.div key={img} variants={FV}
                     className="aspect-square overflow-hidden rounded-xl border border-white/5 hover:border-accent/30 transition-all group">
-                    <img src={`https://buildmate.in/images/${img}.${img.includes('aacblock') ? 'jpg' : 'jpg'}`}
+                    <img src={`/images/${img}.${img.includes('aacblock') ? 'jpg' : 'jpg'}`}
                       alt={img.replace(/_/g,' ')}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-75"
                       onError={e => { e.target.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=60'; e.target.style.opacity='0.3' }}/>
