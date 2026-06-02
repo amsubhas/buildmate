@@ -170,7 +170,7 @@ export default function Footer() {
               className="flex items-center gap-2 opacity-30 hover:opacity-60 transition-opacity"
               aria-label="Website by Sharva's IT">
               <span className="text-slate-500 text-[10px] font-display uppercase tracking-wider">Crafted with care by</span>
-              <img src="//images/sharvasit-logo-official.png" alt="Sharva's IT" className="h-7 w-auto object-contain" loading="lazy"/>
+              <img src="/images/sharvasit-logo-official.png" alt="Sharva's IT" className="h-7 w-auto object-contain" loading="lazy"/>
             </a>
           </div>
         </div>
