@@ -156,7 +156,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 flex-wrap">
-          <p>© 1991–2025 <strong className="text-slate-400">Buildmate Projects Pvt Ltd</strong>. All Rights Reserved.</p>
+          <p>© 1991–2026 <strong className="text-slate-400">Buildmate Projects Pvt Ltd</strong>. All Rights Reserved.</p>
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end">
             <Link to="/contact" className="hover:text-slate-400 transition-colors">Contact</Link>
             <Link to="/partner" className="hover:text-slate-400 transition-colors">Partner With Us</Link>
