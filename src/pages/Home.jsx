@@ -221,8 +221,8 @@ const SLIDES = [
   { bg:'/images/5_precast_concrete_plants.jpeg', tag:'Precast Concrete Plants', h1:'Focus On Quality & Innovation', sub:'Precision precast engineering for modern infrastructure — from facades to structural elements.' },
   { bg:'/images/calcium-silicate_fiber-boards.png', tag:'Calcium Silicate / Fiber Boards', h1:'Cutting-Edge Board Manufacturing', sub:'High-performance Calcium Silicate and Fibre Cement Board plant solutions for modern construction.' },
   { bg:'/images/High-End-Automated-Fly-ash-brick.png', tag:'High-End Automated Fly Ash Bricks', h1:'Most Environment Friendly & Sustainable Solutions', sub:'Automated fly ash brick manufacturing — turning industrial waste into high-strength, eco-friendly products.' },
-  { bg:'/images/6_concrete_block_plants.png', tag:'Concrete Block Plants', h1:'Complete Block Manufacturing Systems', sub:'High-speed vibro-press block plants for hollow, solid and paving applications.' },
-  { bg:'/images/8_mixers.png', tag:'Industrial Mixers', h1:'Heavy-Duty Mixing Excellence', sub:'Planetary, twin-shaft and pan mixers engineered for AAC slurry, concrete and mortar applications.' },
+  { bg:'/images/6_concrete_block_plants.jpeg', tag:'Concrete Block Plants', h1:'Complete Block Manufacturing Systems', sub:'High-speed vibro-press block plants for hollow, solid and paving applications.' },
+  { bg:'/images/8_mixers.jpeg', tag:'Industrial Mixers', h1:'Heavy-Duty Mixing Excellence', sub:'Planetary, twin-shaft and pan mixers engineered for AAC slurry, concrete and mortar applications.' },
 ]
 
 const PRODUCTS = [
