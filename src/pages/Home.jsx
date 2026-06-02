@@ -93,12 +93,13 @@ function HeroSection() {
       {/* Parallax background image */}
       <AnimatePresence mode="wait">
         <motion.div key={cur}
-          style={{ y: bgY, backgroundImage:`url("${s.bg}")` }}
+          style={{ y: bgY }}
           initial={{ opacity:0, scale:1.06 }}
           animate={{ opacity:1, scale:1 }}
           exit={{ opacity:0 }}
           transition={{ duration:1.1, ease:'easeInOut' }}
-          className="absolute inset-0 bg-cover bg-center will-change-transform">
+          className="absolute inset-0 bg-cover bg-center will-change-transform"
+          style={{ backgroundImage:`url('${s.bg}')` }}>
           <div className="absolute inset-0 bg-gradient-to-r from-navy-950/96 via-navy-950/75 to-navy-950/40"/>
           <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30"/>
         </motion.div>

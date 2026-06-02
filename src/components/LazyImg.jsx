@@ -1,36 +1,35 @@
 import { useState, useRef, useEffect } from 'react'
-
-export default function LazyImg({ src, alt, className, fallbackSrc, style, ...props }) {
-  const [loaded,  setLoaded]  = useState(false)
-  const [error,   setError]   = useState(false)
-  const [visible, setVisible] = useState(false)
-  const imgRef = useRef(null)
-
+export default function LazyImg({ src, alt='', className='', style, priority=false, ...props }) {
+  const [loaded, setLoaded] = useState(false)
+  const [lvl, setLvl]       = useState(0)
+  const [vis, setVis]       = useState(priority)
+  const ref = useRef(null)
   useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect() } },
-      { rootMargin: '200px' }
-    )
-    if (imgRef.current) obs.observe(imgRef.current)
+    if (priority) return
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVis(true); obs.disconnect() } }, { rootMargin:'300px' })
+    if (ref.current) obs.observe(ref.current)
     return () => obs.disconnect()
-  }, [])
-
-  const actualSrc = error
-    ? (fallbackSrc || 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=60')
-    : src
-
+  }, [priority])
+  const getSrc = () => {
+    if (lvl===0) return src
+    if (lvl===1 && src && src.startsWith('/images/')) return 'https://buildmate.in' + src
+    return null
+  }
+  const activeSrc = getSrc()
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className || ''}`} style={style}>
-      {!loaded && <div className="absolute inset-0 skeleton"/>}
-      {visible && (
-        <img
-          src={actualSrc} alt={alt}
-          loading="lazy" decoding="async"
+    <div ref={ref} className={'relative overflow-hidden ' + className} style={style}>
+      {!loaded && lvl < 2 && <div className="absolute inset-0 skeleton"/>}
+      {lvl >= 2 && (
+        <div className="absolute inset-0 bg-navy-800 flex items-center justify-center">
+          <div className="text-center opacity-25"><div className="text-3xl mb-1">🏭</div><div className="text-[10px] text-slate-500 font-display uppercase tracking-wide">{alt}</div></div>
+        </div>
+      )}
+      {vis && activeSrc && (
+        <img src={activeSrc} alt={alt} loading={priority?'eager':'lazy'} decoding="async"
           onLoad={() => setLoaded(true)}
-          onError={() => setError(true)}
-          className={`w-full h-full object-cover transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-          {...props}
-        />
+          onError={() => { setLvl(l => l+1); setLoaded(false) }}
+          className={'w-full h-full object-cover transition-opacity duration-500 '+(loaded?'opacity-100':'opacity-0')}
+          {...props}/>
       )}
     </div>
   )

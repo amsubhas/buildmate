@@ -15,7 +15,7 @@ const QUICK = [
   ['Home','/'],['Who We Are','/about'],['Products','/products'],['Services','/services'],
   ['Facilities','/facilities'],['Projects','/projects'],['Customers','/customers'],
   ['News & Events','/news'],['Blog','/blog'],['Partner With Us','/partner'],['AAC Plant Site','https://www.aacplantmanufacturers.com/'],
-  ['Work With Us','/work-with-us'],['Contact Us','/contact'],
+  ['Work With Us','/work-with-us'],['Brochures','/brochures'],['Contact Us','/contact'],
 ]
 
 export default function Footer() {
@@ -48,8 +48,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="/images/Buildmate_logo_rbg.png" alt="Buildmate"
-                className="h-12 w-auto object-contain" onError={e=>e.target.style.display='none'}/>
+              <img src="/images/buildmate-logo.jpg" alt="BuildMate"
+                className="h-12 bg-white rounded-lg p-1 object-contain w-auto object-contain" onError={e=>e.target.style.display='none'}/>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
               Since 1991 — Buildmate Projects Pvt Ltd is India's leading manufacturer and supplier of AAC Block Plants
@@ -170,7 +170,7 @@ export default function Footer() {
               className="flex items-center gap-2 opacity-30 hover:opacity-60 transition-opacity"
               aria-label="Website by Sharva's IT">
               <span className="text-slate-500 text-[10px] font-display uppercase tracking-wider">Crafted with care by</span>
-              <img src="/sharvasit-logo.svg" alt="Sharva's IT" className="h-5 w-auto object-contain" loading="lazy"/>
+              <img src="//images/sharvasit-logo-official.png" alt="Sharva's IT" className="h-7 w-auto object-contain" loading="lazy"/>
             </a>
           </div>
         </div>

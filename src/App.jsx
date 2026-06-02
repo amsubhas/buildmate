@@ -19,6 +19,7 @@ const NewsEvents = lazy(() => import('./pages/NewsEvents'))
 const Partner    = lazy(() => import('./pages/Partner'))
 const WorkWithUs = lazy(() => import('./pages/WorkWithUs'))
 const Contact    = lazy(() => import('./pages/Contact'))
+const Brochures  = lazy(() => import('./pages/Brochures'))
 
 function PageLoader() {
   return (
@@ -52,6 +53,7 @@ export default function App() {
               <Route path="news"    element={<NewsEvents/>}/>
               <Route path="partner" element={<Partner/>}/>
               <Route path="work-with-us" element={<WorkWithUs/>}/>
+              <Route path="brochures" element={<Brochures/>}/>
               <Route path="contact" element={<Contact/>}/>
             </Route>
           </Routes>

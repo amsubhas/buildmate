@@ -151,7 +151,7 @@ export default function Services() {
               <div className={`lg:col-span-2 h-56 lg:h-auto overflow-hidden ${i % 2 === 1 ? 'lg:order-last' : ''}`}>
                 <img src={s.img} alt={s.title}
                   className="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-500"
-                  onError={e => { const f=e.target.src; if(!f.includes('buildmate.in')){e.target.src=f.replace(//images//,'/images/')}else{e.target.style.opacity='0.2'} }}/>
+                  onError={e => { e.target.style.opacity='0.2' }}/>
               </div>
               {/* Content */}
               <div className="lg:col-span-3 p-8 flex flex-col justify-center">
