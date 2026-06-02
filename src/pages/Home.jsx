@@ -234,7 +234,7 @@ const PRODUCTS = [
   { id:'block',  name:'Concrete Block Plants',      img:'/images/6_prod_concrete-block-plants.png',     desc:'High-speed vibro-press block and brick production — hollow, solid, paver' },
   { id:'cranes', name:'Cranes',                    img:'/images/7_prod_cranes.png',                     desc:'EOT, HOT, gantry and jib cranes for industrial plant material handling' },
   { id:'mixers', name:'Mixers',                    img:'/images/8_prod_mixers.png',                     desc:'Twin-shaft, planetary and pan mixers for concrete, AAC slurry and mortar' },
-  { id:'peb',    name:'PEB (Pre Eng. Buildings)',  img:'/images/9_prod_pre_engineered_buildings.png',   desc:'Pre-Engineered Building steel structures for rapid industrial deployment' },
+  { id:'peb',    name:'PEB (Pre Eng. Buildings)',  img:'/images/9_prod_pre_engineered_buildings.jpeg',   desc:'Pre-Engineered Building steel structures for rapid industrial deployment' },
   { id:'special',name:'Special Projects',           img:'/images/10_prod_special_projects.png',          desc:'Bespoke plant solutions and custom industrial engineering for unique requirements' },
 ]
 
