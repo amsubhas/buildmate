@@ -46,12 +46,12 @@ export default function Projects() {
     <div>
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 opacity-20 bg-cover bg-center"
-          style={{ backgroundImage:"url('/images/5_precast_concrete_plants.jpg')" }}/>
+          style={{ backgroundImage:"url('/images/5_precast_concrete_plants.jpeg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/60"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Projects</p>
           <h1 className="section-title text-5xl text-white mb-4">Plants Under Operation & Execution</h1>
-          <p className="text-slate-300 max-w-xl leading-relaxed">500+ plants commissioned across 20+ countries. See our real-world installations and ongoing projects.</p>
+          <p className="text-slate-300 max-w-xl leading-relaxed">Explore published Buildmate project records, including plants under operation and projects under execution.</p>
         </div>
       </section>
       <div className="divider"/>
@@ -59,7 +59,7 @@ export default function Projects() {
       {/* Stats */}
       <div className="bg-navy-900 py-8 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 sm:grid-cols-4 gap-5">
-          {[['500+','Plants Commissioned'],['20+','Countries'],['18+','Projects Executing'],['1991','Established']].map(([n,l]) => (
+          {[['31','Published Project Records'],['22','Under Operation'],['9','Under Execution'],['1991','Established']].map(([n,l]) => (
             <div key={l} className="text-center">
               <div className="font-display font-bold text-3xl text-accent">{n}</div>
               <div className="text-xs text-slate-400 uppercase tracking-wide mt-1">{l}</div>
@@ -147,7 +147,7 @@ export default function Projects() {
                     <img src={`/images/${img}.${img.includes('aacblock') ? 'jpg' : 'jpg'}`}
                       alt={img.replace(/_/g,' ')}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-75"
-                      onError={e => { e.target.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=60'; e.target.style.opacity='0.3' }}/>
+                      onError={e => { e.target.style.display='none' }}/>
                   </motion.div>
                 ))}
               </div>

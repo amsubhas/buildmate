@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/images/:path*",
-      "destination": "https://www.buildmate.in/images/:path*"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

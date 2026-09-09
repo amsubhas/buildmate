@@ -1,11 +1,7 @@
 /**
- * Smart image resolver — always serves from /images/ (works when deployed to buildmate.in)
- * Falls back to external buildmate.in URL if local not found
+ * Buildmate local asset resolver.
+ * Keep production rendering self-contained so missing external assets cannot
+ * silently introduce unrelated imagery or deployment-time CORS/MIME issues.
  */
 export const img = (filename) => `/images/${filename}`
-
-export const imgFallback = (filename) =>
-  `/images/${filename}`
-
-// Unsplash industrial fallback
-export const placeholder = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=60'
+export const imgFallback = (filename) => `/images/${filename}`

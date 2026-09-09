@@ -44,7 +44,7 @@ export default function Facilities() {
       <section className="py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mb-16" variants={SC} initial="hidden" whileInView="visible" viewport={VP}>
-            {[['50,000+','Sq.ft. Facility'],['200+','Skilled Workforce'],['30+','CNC Machines'],['ISO 9001:2015','Certified QMS']].map(([n,l]) => (
+            {[['Engineering','Integrated disciplines'],['Manufacturing','In-house capability'],['QA/QC','Project-wide checks'],['1991','Established']].map(([n,l]) => (
               <motion.div key={l} variants={FV} className="glass p-5 rounded-xl text-center">
                 <div className="font-display font-bold text-2xl text-accent mb-1">{n}</div>
                 <div className="text-xs text-slate-400 uppercase tracking-wide">{l}</div>
@@ -58,7 +58,7 @@ export default function Facilities() {
                 <div className="h-48 overflow-hidden">
                   <img src={f.img} alt={f.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
-                    onError={e => { e.target.src='https://images.unsplash.com/photo-1581092160607-ee67df1d9d52?w=600&q=60'; e.target.style.opacity='0.4' }}/>
+                    onError={e => { e.target.style.display='none' }}/>
                 </div>
                 <div className="p-6">
                   <h3 className="section-title text-xl text-white mb-3">{f.title}</h3>

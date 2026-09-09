@@ -100,7 +100,7 @@ export default function Customers() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div variants={FV} initial="hidden" whileInView="visible" viewport={VP}>
             <h2 className="section-title text-4xl text-white mb-4">Join Our Global Client Network</h2>
-            <p className="text-slate-400 mb-8">Become part of the 500+ companies who trust Buildmate for their industrial plant requirements.</p>
+            <p className="text-slate-400 mb-8">Explore Buildmate's published project references and technical capabilities, then discuss your own requirement with our team.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/contact" className="btn-primary">Get a Quote <ArrowRight size={15}/></Link>
               <Link to="/projects" className="btn-outline">View Projects</Link>

@@ -20,7 +20,7 @@ const perks = [
   { icon:Award,      title:'Industry Leader',      desc:"Work at India's top AAC plant manufacturer with 30+ years of engineering heritage." },
   { icon:Globe,      title:'Global Exposure',       desc:'Opportunities to work on international projects across Middle East, Africa and SE Asia.' },
   { icon:TrendingUp, title:'Career Growth',         desc:'Fast-track career progression in a growing company with ambitious expansion plans.' },
-  { icon:Users,      title:'Expert Team',           desc:'Learn from 200+ engineers and industry specialists in a collaborative environment.' },
+  { icon:Users,      title:'Expert Team',           desc:'Learn from experienced engineers and industry specialists in a collaborative environment.' },
 ]
 
 export default function WorkWithUs() {

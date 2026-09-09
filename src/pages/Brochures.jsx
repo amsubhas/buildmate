@@ -15,9 +15,9 @@ const BROCHURES = [
     category:'Manufacturing Plants',
     img:'/images/1_prod_aac_plant.png',
     pdf:'/brochures/pdf/AAC PLANTS-n.pdf',
-    color:'#233C82',
-    accent:'#465A96',
-    pages:'16',
+    color:'#192D78',
+    accent:'#2F4590',
+    pages:'Legacy source – verify',
     desc:'Complete technical guide to Buildmate AAC Block Plant technology — capacity options from 30,000 to 300,000 m\u00b3/year, process flow, automation systems, project references and commissioning details.',
     highlights:['Capacity: 30K\u2013300K m\u00b3/yr','Fully automated PLC/SCADA','Proprietary autoclave design','Complete turnkey delivery'],
     tag:'Flagship Product',
@@ -30,8 +30,8 @@ const BROCHURES = [
     img:'/images/5_prod_precast_concrete_plants.png',
     pdf:'/brochures/pdf/PRECAST CONCRETE PLANT-n.pdf',
     color:'#1a3060',
-    accent:'#233C82',
-    pages:'12',
+    accent:'#192D78',
+    pages:'Legacy source – verify',
     desc:'Precision precast concrete manufacturing facilities for facades, structural walls, bridge elements and infrastructure components with advanced mold and curing systems.',
     highlights:['Custom mold systems','Steam curing chambers','Automated demoulding','Precast facades & walls'],
     tag:'Structural',
@@ -44,8 +44,8 @@ const BROCHURES = [
     img:'/images/3_prod_concrete-batching-plants.png',
     pdf:'/brochures/pdf/Concrete Batching Plant.pdf',
     color:'#1e2d50',
-    accent:'#233C82',
-    pages:'10',
+    accent:'#192D78',
+    pages:'Legacy source – verify',
     desc:'High-output ready-mix and site concrete batching plants with precise metering, twin-shaft mixers, automated material handling and advanced SCADA control systems.',
     highlights:['30\u2013240 m\u00b3/hr output','Twin-shaft mixer','Automated aggregate feed','Remote monitoring'],
     tag:'Batching',
@@ -58,8 +58,8 @@ const BROCHURES = [
     img:'/images/4_prod_dry_mix_mortar_plants.png',
     pdf:'/brochures/pdf/DRY READY MIX MORTOR PLANT-n.pdf',
     color:'#152545',
-    accent:'#233C82',
-    pages:'10',
+    accent:'#192D78',
+    pages:'Legacy source – verify',
     desc:'Automated dry-mix mortar production lines for tile adhesives, wall plastering, waterproofing compounds and grouting mortars with advanced weighing and bagging systems.',
     highlights:['5\u201320 TPH production','Precision weighing','Automated silo filling','Full SCADA control'],
     tag:'Dry Mix',
@@ -72,8 +72,8 @@ const BROCHURES = [
     img:'/images/6_prod_concrete-block-plants.png',
     pdf:'/brochures/pdf/CONCRETE BLOCK PLANT-n.pdf',
     color:'#1a2a40',
-    accent:'#233C82',
-    pages:'10',
+    accent:'#192D78',
+    pages:'Legacy source – verify',
     desc:'High-speed vibro-press concrete block manufacturing systems for hollow blocks, solid blocks, paving stones and kerbstones with automated curing rack systems.',
     highlights:['2,000\u201310,000 blocks/hr','Vibro-press technology','Multiple block formats','Paver capability'],
     tag:'Block Plants',
@@ -86,8 +86,8 @@ const BROCHURES = [
     img:'/images/2_prod_crushers_plant.png',
     pdf:'/brochures/pdf/StoneCrushingPlants.pdf',
     color:'#1e3050',
-    accent:'#233C82',
-    pages:'8',
+    accent:'#192D78',
+    pages:'Legacy source – verify',
     desc:'Heavy-duty rock and aggregate crushing systems for construction, mining and quarrying applications including jaw, cone and VSI crushers with multi-stage screening.',
     highlights:['50\u20131000 TPH capacity','Jaw, Cone & VSI crushers','Multi-stage screening','Dust suppression'],
     tag:'Crushing',
@@ -100,8 +100,8 @@ const BROCHURES = [
     img:'/images/7_prod_cranes.png',
     pdf:'/brochures/pdf/Cranes,PEBs.pdf',
     color:'#0d1f42',
-    accent:'#233C82',
-    pages:'14',
+    accent:'#192D78',
+    pages:'Legacy source – verify',
     desc:'Industrial overhead and gantry cranes combined with Pre-Engineered Building steel structure manufacturing plants for complete industrial facility solutions.',
     highlights:['1T\u2013100T cranes','EOT & HOT types','PEB roll-forming lines','CNC fabrication'],
     tag:'Equipment',
@@ -114,8 +114,8 @@ const BROCHURES = [
     img:'/images/6_prod_concrete-block-plants.png',
     pdf:'/brochures/ConcreteBlocks.pdf',
     color:'#122550',
-    accent:'#465A96',
-    pages:'8',
+    accent:'#2F4590',
+    pages:'Legacy source – verify',
     desc:'Complete product catalogue covering the full range of concrete block and brick types manufactured on Buildmate plants, including technical specifications and quality standards.',
     highlights:['Full product range','Technical specs','Quality standards','Application guide'],
     tag:'Catalogue',
@@ -128,8 +128,8 @@ const BROCHURES = [
     img:'/images/5_prod_precast_concrete_plants.png',
     pdf:'/brochures/PrecastConcreteElements.pdf',
     color:'#1a2f5e',
-    accent:'#465A96',
-    pages:'12',
+    accent:'#2F4590',
+    pages:'Legacy source – verify',
     desc:'Comprehensive catalogue of precast concrete elements manufactured on Buildmate plants including facades, structural walls, slabs, beams and infrastructure components.',
     highlights:['Facades & walls','Structural elements','Bridge components','Custom molds'],
     tag:'Catalogue',
@@ -153,7 +153,7 @@ function BrochureCard({ b }) {
       }}>
 
       {/* Top accent bar */}
-      <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${b.color}, ${b.accent}, #D72D23)` }}/>
+      <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${b.color}, ${b.accent}, #C8281E)` }}/>
 
       {/* Image */}
       <div className="relative h-44 overflow-hidden bg-navy-800 flex-shrink-0">
@@ -165,7 +165,7 @@ function BrochureCard({ b }) {
           style={{ transform: hover ? 'scale(1.06)' : 'scale(1)', opacity: 0.65 }}
           onError={e => {
             e.target.onerror = null
-            e.target.src = 'https://buildmate.in/images/' + b.img.replace('/images/','')
+            e.target.style.display = 'none'
           }}
         />
         <div className="absolute inset-0" style={{ background: `linear-gradient(to top, ${b.color}ee 0%, ${b.color}44 50%, transparent 100%)` }}/>
@@ -241,32 +241,32 @@ export default function Brochures() {
       {/* Hero Banner */}
       <section className="relative py-24 bg-navy-900 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30"/>
-        <div className="absolute inset-0" style={{ background:'linear-gradient(135deg, rgba(35,60,130,0.25) 0%, rgba(215,45,35,0.08) 100%)' }}/>
+        <div className="absolute inset-0" style={{ background:'linear-gradient(135deg, rgba(25,45,120,0.25) 0%, rgba(200,40,30,0.08) 100%)' }}/>
         <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 bg-cover bg-center hidden lg:block"
           style={{ backgroundImage:"url('/images/1_prod_aac_plant.png')" }}/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Resource Library</p>
           <h1 className="section-title text-5xl text-white mb-4">
             Technical Brochures &amp;<br/>
-            <span style={{ color:'#D72D23' }}>Product Catalogues</span>
+            <span style={{ color:'#C8281E' }}>Product Catalogues</span>
           </h1>
           <p className="text-slate-300 max-w-xl leading-relaxed mb-6">
             Download detailed technical brochures for all Buildmate products — specifications, capacity ranges,
             process flows, project references and commissioning details.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href="/brochures/pdf/AAC PLANTS-n.pdf" download
+            <a href="/brochures/pdf/AAC PLANTS-n.pdf" target="_blank" rel="noopener noreferrer"
               className="btn-primary flex items-center gap-2">
-              <Download size={15}/> Download All Brochures
+              <Download size={15}/> Download AAC Brochure
             </a>
             <Link to="/contact" className="btn-outline">Request Printed Copy</Link>
           </div>
 
           {/* Stats strip */}
           <div className="flex flex-wrap gap-6 mt-8">
-            {[['9','Product Brochures'],['50+','Technical Pages'],['Free','Download'],['PDF','Format']].map(([n,l]) => (
+            {[['9','Product Brochures'],['Source','Technical Content'],['Free','Download'],['PDF','Format']].map(([n,l]) => (
               <div key={l} className="flex items-center gap-2">
-                <span className="font-display font-bold text-2xl" style={{ color:'#233C82' }}>{n}</span>
+                <span className="font-display font-bold text-2xl" style={{ color:'#192D78' }}>{n}</span>
                 <span className="text-slate-400 text-xs uppercase tracking-wide font-display">{l}</span>
               </div>
             ))}
@@ -286,7 +286,7 @@ export default function Brochures() {
               <button key={cat} onClick={() => setActiveCat(cat)}
                 className="px-5 py-2 rounded-full text-sm font-display font-semibold uppercase tracking-wide transition-all duration-250"
                 style={activeCat===cat
-                  ? { background:'linear-gradient(135deg,#233C82,#465A96)', color:'#fff', boxShadow:'0 4px 16px rgba(35,60,130,0.4)' }
+                  ? { background:'linear-gradient(135deg,#192D78,#2F4590)', color:'#fff', boxShadow:'0 4px 16px rgba(25,45,120,0.4)' }
                   : { background:'transparent', color:'#94a3b8', border:'1px solid rgba(255,255,255,0.1)' }
                 }>
                 {cat}

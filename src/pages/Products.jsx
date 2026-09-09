@@ -57,9 +57,9 @@ function ProductCard({ p, index }) {
     const gx = Math.round(x * 100 + 50)
     const gy = Math.round(y * 100 + 50)
     card.style.transform     = `perspective(1000px) rotateY(${x*10}deg) rotateX(${-y*7}deg) scale(1.015) translateZ(0)`
-    card.style.background    = `radial-gradient(circle at ${gx}% ${gy}%, rgba(14,165,233,0.08), rgba(13,31,60,0.7) 60%)`
-    card.style.boxShadow     = `${-x*20}px ${-y*16}px 40px rgba(0,0,0,0.4), 0 0 30px rgba(14,165,233,${0.08+Math.abs(x)*0.1})`
-    card.style.borderColor   = `rgba(14,165,233,${0.2+Math.abs(x)*0.2})`
+    card.style.background    = `radial-gradient(circle at ${gx}% ${gy}%, rgba(25,45,120,0.08), rgba(13,31,60,0.7) 60%)`
+    card.style.boxShadow     = `${-x*20}px ${-y*16}px 40px rgba(0,0,0,0.4), 0 0 30px rgba(25,45,120,${0.08+Math.abs(x)*0.1})`
+    card.style.borderColor   = `rgba(25,45,120,${0.2+Math.abs(x)*0.2})`
   }
   const handleMouseLeave = () => {
     const card = cardRef.current
@@ -80,7 +80,7 @@ function ProductCard({ p, index }) {
       <div className="relative h-52 overflow-hidden">
         <img src={p.img} alt={p.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-75"
-          onError={e => { e.target.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=60'; e.target.style.opacity='0.4' }}/>
+          onError={e => { e.target.style.display='none' }}/>
         <div className="absolute inset-0 bg-gradient-to-t from-navy-800 to-transparent"/>
         <div className="absolute top-4 left-4 flex flex-wrap gap-2">
           <span className="text-xs font-display uppercase tracking-wider text-gold bg-navy-900/80 px-3 py-1 rounded-full border border-white/10">
@@ -175,23 +175,6 @@ const CLIENT_BRIEF_PRODUCTS = [
     applications:['Industrial warehouses','Aircraft hangars','Sports facilities','Commercial buildings','Cold storage']
   },
   {
-    id:'carbon', name:'Carbon Capture Plants', tag:'Sustainable Technology', badge:'Green',
-    img:'/images/calcium-silicate_fiber-boards.png',
-    overview:'Next-generation CO₂ capture and utilisation systems integrated into industrial manufacturing processes. Converts carbon emissions into construction-grade materials, enabling net-zero production.',
-    features:['CO₂ capture & utilisation','Industrial emission reduction','Construction material conversion','Net-zero manufacturing','ESG compliance ready','Modular integration design'],
-    applications:['AAC & FCB plants','Cement industries','Power plant integration','Industrial emission control','Net-zero factories']
-  },
-  {
-    id:'fcb', name:'FCB Plants', tag:'Fly Ash Calcium Brick',
-    img:'/images/High-End-Automated-Fly-ash-brick.png',
-    overview:'High-end automated Fly Ash Calcium Brick (FCB) manufacturing plants — converting industrial fly ash waste into high-strength, environmentally friendly building bricks at scale.',
-    features:['Fly ash utilisation 60%+','High-strength output blocks','Fully automated pressing','Steam autoclave curing','Zero waste production','ISO quality standards'],
-    applications:['High-strength bricks','Eco-friendly construction','Fly ash waste utilisation','Green building materials','Export markets']
-  },
-]
-
-const EXTRA_PRODUCTS = [
-  {
     id:'crushing', name:'Stone Crushing Plants', tag:'Aggregate Processing',
     img:'/images/2_prod_crushers_plant.png',
     overview:'Heavy-duty rock and aggregate crushing systems for construction, mining and quarrying. Jaw, cone and VSI crushers with multi-stage screening.',
@@ -248,13 +231,13 @@ export default function Products() {
       {/* Banner */}
       <section className="relative py-24 bg-navy-900">
         <div className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage:"url('/images/1_aac_plants.jpg')" }}/>
+          style={{ backgroundImage:"url('/images/1_aac_plants.jpeg')" }}/>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 to-navy-900/50"/>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="section-label mb-3">Products</p>
           <h1 className="section-title text-5xl text-white mb-4 max-w-2xl">Industrial Plant Solutions Portfolio</h1>
           <p className="text-slate-300 max-w-xl leading-relaxed">
-            Complete range — AAC, Precast, PEB, Carbon Capture, FCB, Materials and more.
+            Complete range — AAC, stone crushing, batching, dry mix mortar, precast, concrete blocks, cranes, mixers, PEB and special projects.
             Designed, fabricated and commissioned globally since 1991.
           </p>
         </div>
@@ -299,7 +282,7 @@ export default function Products() {
                   icon:'🪨', name:'Lime', color:'from-amber-600/15',
                   desc:'High-purity quicklime and hydrated lime supply specifically processed for AAC block manufacturing. Consistent quality with reliable supply chain management to keep your plant running.',
                   specs:['High reactivity quicklime','Hydrated lime (Ca(OH)₂)','AAC-grade purity','Consistent particle size','Reliable bulk supply','Quality certificates'],
-                  uses:['AAC block production','FCB manufacturing','Soil stabilisation','Construction mortar']
+                  uses:['AAC block production','building-material manufacturing','Soil stabilisation','Construction mortar']
                 },
                 {
                   icon:'🌫️', name:'Fly Ash', color:'from-slate-500/15',

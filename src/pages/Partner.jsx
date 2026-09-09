@@ -11,7 +11,7 @@ const benefits = [
   { icon:TrendingUp, title:'Exclusive Territory Rights',  desc:'Dedicated geographic territory with exclusive dealership rights for Buildmate product lines in your market.' },
   { icon:Award,      title:'Marketing Support',           desc:'Full marketing collateral, digital assets, exhibition support and Buildmate brand usage rights.' },
   { icon:Users,      title:'Technical Training',          desc:'Comprehensive product and application engineering training. Sales and after-sales support programs.' },
-  { icon:Globe,      title:'Global Brand Backing',        desc:'Leverage Buildmate 30+ year industry reputation and 500+ global project references.' },
+  { icon:Globe,      title:'Global Brand Backing',        desc:'Leverage Buildmate's long-standing engineering experience and published project references.' },
   { icon:Cpu,        title:'Pre-Sales Engineering',       desc:'Dedicated pre-sales engineering support for proposals, technical queries and customer demos.' },
   { icon:Handshake,  title:'Competitive Margins',         desc:'Industry-competitive dealer margins with performance-based incentive and bonus programs.' },
 ]
