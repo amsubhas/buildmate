@@ -20,7 +20,10 @@ const NAV = [
     { label:'AAC Plants',                     to:'/products#aac'      },
     { label:'Precast (Facades / Walls)',       to:'/products#precast'  },
     { label:'PEB Systems',                    to:'/products#peb'      },
-        { label:'Stone Crushing Plants',    to:'/products#crushing' },
+    { label:'Carbon Capture Plants',           to:'/products#carbon'  },
+    { label:'FCB Plants',                      to:'/products#fcb'     },
+    { label:'Lime & Fly Ash',                  to:'/products#materials'},
+    { label:'Stone Crushing Plants',    to:'/products#crushing' },
     { label:'Concrete Batching Plants', to:'/products#batching' },
     { label:'Dry Mix Mortar Plants',    to:'/products#drymix'   },
     { label:'Concrete Block Plants',    to:'/products#block'    },
@@ -66,10 +69,10 @@ function Dropdown({ items, onClose }) {
   return (
     <motion.div initial={{ opacity:0,y:8 }} animate={{ opacity:1,y:0 }} exit={{ opacity:0,y:4 }}
       transition={{ duration:0.16 }}
-      className="absolute top-full left-0 mt-1 buildmate-dropdown rounded-xl shadow-2xl min-w-[250px] py-2 z-50 max-h-[75vh] overflow-y-auto">
+      className="absolute top-full left-0 mt-1 glass border border-white/10 rounded-xl shadow-2xl min-w-[220px] py-2 z-50 max-h-[75vh] overflow-y-auto">
       {items.map((item,i) => (
         <NavItem key={i} item={item} onClose={onClose}
-          className="block px-4 py-2 text-xs text-slate-100 hover:text-[#C8281E] hover:bg-white/5 transition-colors font-display uppercase tracking-wider"/>
+          className="block px-4 py-2 text-xs text-slate-300 hover:text-[#D72D23] hover:bg-white/5 transition-colors font-display uppercase tracking-wider"/>
       ))}
     </motion.div>
   )
@@ -96,8 +99,6 @@ export default function Navbar() {
   return (
     <header className={'sticky top-0 z-50 transition-all duration-300 border-b border-white/5 '+(scrolled?'glass shadow-xl':'bg-navy-900/90 backdrop-blur-md')} role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-
-        {/* ── Real BuildMate Logo ── */}
         <Link to="/" className="flex items-center gap-2 shrink-0 group" aria-label="BuildMate Home">
           <div className="bg-white rounded-xl px-3 py-1.5 shadow-md group-hover:shadow-lg transition-all duration-300 flex items-center" style={{minWidth:130}}>
             <img
@@ -110,7 +111,6 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden xl:flex items-center" aria-label="Main navigation">
           {NAV.map(item => (
             <div key={item.label} className="relative"
@@ -119,13 +119,13 @@ export default function Navbar() {
               <NavLink to={item.to}
                 className={({ isActive }) =>
                   'flex items-center gap-0.5 px-2.5 py-2 text-[11px] font-display font-semibold uppercase tracking-wide rounded transition-colors whitespace-nowrap '+
-                  (isActive ? 'text-[#C8281E]' : 'text-slate-300 hover:text-white')
+                  (isActive ? 'text-[#D72D23]' : 'text-slate-300 hover:text-white')
                 }>
                 {item.label}
                 {item.sub && <ChevronDown size={10} className={'transition-transform '+(activeDD===item.label?'rotate-180':'')}/>}
               </NavLink>
               <AnimatePresence>
-                {item.sub && activeDD===item.label && <Dropdown items={item.sub} onClose={() => setActiveDD(null)}/>}
+                {item.sub && activeDD===item.label && <Dropdown items={item.sub} onClose={() => setActiveDD(null)}/>} 
               </AnimatePresence>
             </div>
           ))}
@@ -137,7 +137,7 @@ export default function Navbar() {
         </div>
 
         <button onClick={() => setOpen(!open)} className="xl:hidden text-slate-300 p-2" aria-label={open?'Close':'Open menu'}>
-          {open ? <X size={22}/> : <Menu size={22}/>}
+          {open ? <X size={22}/> : <Menu size={22}/>} 
         </button>
       </div>
 
@@ -151,7 +151,7 @@ export default function Navbar() {
                   <NavLink to={item.to} onClick={() => setOpen(false)}
                     className={({ isActive }) =>
                       'block px-3 py-2.5 rounded font-display uppercase tracking-wide text-sm font-semibold '+
-                      (isActive ? 'text-[#C8281E] bg-red-DEFAULT/10' : 'text-slate-300 hover:text-white hover:bg-white/5')
+                      (isActive ? 'text-[#D72D23] bg-red-DEFAULT/10' : 'text-slate-300 hover:text-white hover:bg-white/5')
                     }>
                     {item.label}
                   </NavLink>
@@ -159,7 +159,7 @@ export default function Navbar() {
                     <div className="ml-4 border-l border-white/10 pl-3 mb-1">
                       {item.sub.map((s,i) => (
                         <NavItem key={i} item={s} onClose={() => setOpen(false)}
-                          className="block py-1.5 text-xs text-slate-400 hover:text-[#C8281E] font-display uppercase tracking-wide transition-colors"/>
+                          className="block py-1.5 text-xs text-slate-400 hover:text-[#D72D23] font-display uppercase tracking-wide transition-colors"/>
                       ))}
                     </div>
                   )}
