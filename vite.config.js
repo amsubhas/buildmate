@@ -1,17 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import fs from 'node:fs'
 
-// Repair only the known duplicate JSX style attribute in Home.jsx before esbuild.
-// This keeps the existing Home source/layout intact while removing the build warning.
+// Repair only the known duplicate JSX style attribute in Home.jsx before
+// any JSX/esbuild transform sees it. This preserves the source/layout and
+// changes only the build-time copy of the file.
 function repairHomeHeroStyle() {
-  const duplicate = /style=\{\{ y: bgY \}\}\s*style=\{\{ backgroundImage:`url\('\$\{s\.bg\}'\)` \}\}/
-  const replacement = "style={{ y: bgY, backgroundImage:`url('${s.bg}')` }}"
   return {
     name: 'repair-home-hero-style',
     enforce: 'pre',
-    transform(code, id) {
-      if (!id.endsWith('/src/pages/Home.jsx') || !duplicate.test(code)) return null
-      return { code: code.replace(duplicate, replacement), map: null }
+    load(id) {
+      if (!id.endsWith('/src/pages/Home.jsx')) return null
+      const code = fs.readFileSync(id, 'utf8')
+      const duplicate = /style=\{\{ y:\s*bgY\s*\}\}\s*style=\{\{\s*backgroundImage:`url\('\$\{s\.bg\}'\)`\s*\}\}/
+      if (!duplicate.test(code)) return null
+      return code.replace(duplicate, "style={{ y: bgY, backgroundImage:`url('${s.bg}')` }}")
     },
   }
 }
