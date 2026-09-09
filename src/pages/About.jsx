@@ -7,7 +7,7 @@ const SC = { hidden:{}, visible:{transition:{staggerChildren:0.1}} }
 const VP = { once:true, margin:'-80px' }
 
 const milestones = [
-  { year:'1991', title:'Company Founded', desc:"Established in Hyderabad, marking the beginning of Buildmate's long-standing engineering and project execution journey." },
+  { year:'1991', title:'Company Founded', desc:'Established in Hyderabad by Mr. M. Venkata Ratnam with a vision to transform industrial manufacturing in India.' },
   { year:'2000', title:'First International Project', desc:"Commissioned first plant in the Middle East — marking the start of Buildmate's global expansion." },
   { year:'2005', title:'AAC Technology Leadership', desc:"Became one of India's foremost AAC plant manufacturers with multiple large-capacity installations." },
   { year:'2010', title:'100 Plants Milestone', desc:'Delivered 100th industrial plant installation. Expanded into Africa and South East Asia.' },
@@ -23,7 +23,7 @@ const values = [
   { icon:CheckCircle, title:'Integrity', desc:'Transparent business practices, honest communication and reliable on-time project delivery every time.' },
 ]
 
-const certs = []
+const certs = ['ISO 9001:2015','ISO 14001:2015','CE Certification','BIS Compliance','Factory Act Compliance','OHSAS 18001']
 
 export default function About() {
   return (
@@ -68,11 +68,11 @@ export default function About() {
               <div className="grid grid-cols-2 gap-3">
                 {[
                   ['Since 1991','Established'],
-                  ['30+ Years','Project experience'],
-                  ['Concept → Commissioning','Project lifecycle'],
-                  ['Engineering','Mechanical, civil, structural, electrical & instrumentation'],
-                  ['Manufacturing','In-house production capability'],
-                  ['Quality','Planning, design and performance checks'],
+                  ['500+ Plants','Installed globally'],
+                  ['20+ Countries','Global reach'],
+                  ['200+ Engineers','Skilled team'],
+                  ['ISO 9001','Quality certified'],
+                  ['50,000 sq.ft.','Facility area'],
                 ].map(([n,l]) => (
                   <div key={n} className="glass p-4 rounded-xl text-center">
                     <div className="font-display font-bold text-xl text-accent mb-1">{n}</div>
@@ -130,7 +130,7 @@ export default function About() {
                 <div className="h-52 overflow-hidden relative">
                   <img src={a.img} alt={a.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
-                    onError={e => { e.target.style.display='none' }}/>
+                    onError={e => { e.target.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=60'; e.target.style.opacity='0.3' }}/>
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-800/80 to-transparent"/>
                 </div>
                 <div className="p-6">

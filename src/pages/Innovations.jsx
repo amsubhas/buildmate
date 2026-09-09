@@ -58,7 +58,7 @@ export default function Innovations() {
                 <div className={`rounded-2xl overflow-hidden border border-white/10 ${i%2===1 ? 'order-first lg:order-last' : ''}`}>
                   <img src={inn.img} alt={inn.title}
                     className="w-full h-72 object-cover opacity-70"
-                    onError={e => { e.target.style.display='none' }}/>
+                    onError={e => { e.target.src='https://images.unsplash.com/photo-1581092160607-ee67df1d9d52?w=700&q=60'; e.target.style.opacity='0.4' }}/>
                 </div>
               </motion.div>
             ))}

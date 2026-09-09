@@ -10,12 +10,16 @@ export default function LazyImg({ src, alt='', className='', style, priority=fal
     if (ref.current) obs.observe(ref.current)
     return () => obs.disconnect()
   }, [priority])
-  const getSrc = () => lvl === 0 ? src : null
+  const getSrc = () => {
+    if (lvl===0) return src
+    if (lvl===1 && src && src.startsWith('/images/')) return 'https://buildmate.in' + src
+    return null
+  }
   const activeSrc = getSrc()
   return (
     <div ref={ref} className={'relative overflow-hidden ' + className} style={style}>
-      {!loaded && lvl < 1 && <div className="absolute inset-0 skeleton"/>}
-      {lvl >= 1 && (
+      {!loaded && lvl < 2 && <div className="absolute inset-0 skeleton"/>}
+      {lvl >= 2 && (
         <div className="absolute inset-0 bg-navy-800 flex items-center justify-center">
           <div className="text-center opacity-25"><div className="text-3xl mb-1">🏭</div><div className="text-[10px] text-slate-500 font-display uppercase tracking-wide">{alt}</div></div>
         </div>
@@ -23,7 +27,7 @@ export default function LazyImg({ src, alt='', className='', style, priority=fal
       {vis && activeSrc && (
         <img src={activeSrc} alt={alt} loading={priority?'eager':'lazy'} decoding="async"
           onLoad={() => setLoaded(true)}
-          onError={() => { setLvl(1); setLoaded(false) }}
+          onError={() => { setLvl(l => l+1); setLoaded(false) }}
           className={'w-full h-full object-cover transition-opacity duration-500 '+(loaded?'opacity-100':'opacity-0')}
           {...props}/>
       )}

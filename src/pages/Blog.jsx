@@ -6,13 +6,14 @@ const FV = { hidden:{opacity:0,y:25}, visible:{opacity:1,y:0,transition:{duratio
 const SC = { hidden:{}, visible:{transition:{staggerChildren:0.08}} }
 const VP = { once:true, margin:'-80px' }
 
-const CATS = ['All','AAC Technology','Industrial Automation','Sustainable Construction','Precast Engineering','Block Plants']
+const CATS = ['All','AAC Technology','Industrial Automation','Sustainable Construction','Precast Engineering','Carbon Capture','Block Plants']
 
 const posts = [
   { cat:'AAC Technology', title:'How AAC Blocks Are Revolutionizing Green Construction in India', excerpt:'Autoclaved Aerated Concrete is transforming construction with superior thermal insulation, lightweight properties and a sustainable production process that uses fly ash waste.', date:'Dec 2024', author:'Buildmate Team', read:'5 min', img:'/images/aacblock_seven_one.jpg' },
   { cat:'Precast Engineering', title:'Benefits of Precast Concrete in Modern High-Rise Construction', excerpt:'Precast concrete elements are accelerating timelines, improving quality consistency and reducing waste on projects from residential towers to bridges and infrastructure.', date:'Nov 2024', author:'Engineering Dept', read:'6 min', img:'/images/5_prod_precast_concrete_plants.png' },
   { cat:'Industrial Automation', title:'Industry 4.0 in Concrete and AAC Plant Manufacturing', excerpt:'Smart sensors, IoT connectivity and AI-driven process optimisation are transforming how AAC and concrete batching plants operate, maintain themselves and deliver quality.', date:'Oct 2024', author:'R&D Team', read:'7 min', img:'/images/9_prod_pre_engineered_buildings.png' },
   { cat:'Sustainable Construction', title:'Fly Ash Utilisation in AAC and FCB Block Production', excerpt:'Converting industrial waste fly ash into high-strength building blocks reduces landfill burden, lowers carbon emissions and cuts production costs simultaneously.', date:'Sep 2024', author:'Buildmate Team', read:'5 min', img:'/images/High-End-Automated-Fly-ash-brick.png' },
+  { cat:'Carbon Capture', title:'Carbon Capture Technology Integration in Industrial Plant Manufacturing', excerpt:'Emerging carbon capture and utilisation systems enable industrial plants to convert CO₂ emissions into valuable construction materials and fuels — a game changer for AAC.', date:'Aug 2024', author:'R&D Team', read:'8 min', img:'/images/calcium-silicate_fiber-boards.png' },
   { cat:'AAC Technology', title:'AAC vs Red Brick: A Comprehensive Technical Comparison', excerpt:'An in-depth comparison of Autoclaved Aerated Concrete blocks versus traditional red clay bricks across strength, thermal, acoustic and sustainability parameters.', date:'Jul 2024', author:'Engineering Dept', read:'6 min', img:'/images/aacblock_seven_two.jpg' },
   { cat:'Block Plants', title:'Choosing the Right Concrete Block Plant: Vibro-Press vs Hydraulic', excerpt:'A technical guide to selecting between vibro-press and hydraulic block manufacturing systems based on output, block types, quality requirements and budget.', date:'Jun 2024', author:'Engineering Dept', read:'5 min', img:'/images/6_prod_concrete-block-plants.png' },
   { cat:'Industrial Automation', title:'SCADA Systems for AAC Plant Monitoring and Control', excerpt:'How modern SCADA and PLC systems are enabling remote monitoring, real-time quality control and predictive maintenance in AAC block manufacturing plants.', date:'May 2024', author:'Automation Team', read:'6 min', img:'/images/8_prod_mixers.png' },
@@ -50,7 +51,7 @@ export default function Blog() {
                 <div className="h-48 overflow-hidden shrink-0">
                   <img src={p.img} alt={p.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
-                    onError={e => { e.target.style.display='none' }}/>
+                    onError={e => { e.target.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=60'; e.target.style.opacity='0.3' }}/>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <span className="text-xs font-display uppercase tracking-wider text-gold mb-2">{p.cat}</span>

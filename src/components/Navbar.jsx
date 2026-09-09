@@ -99,6 +99,8 @@ export default function Navbar() {
   return (
     <header className={'sticky top-0 z-50 transition-all duration-300 border-b border-white/5 '+(scrolled?'glass shadow-xl':'bg-navy-900/90 backdrop-blur-md')} role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+
+        {/* ── Real BuildMate Logo ── */}
         <Link to="/" className="flex items-center gap-2 shrink-0 group" aria-label="BuildMate Home">
           <div className="bg-white rounded-xl px-3 py-1.5 shadow-md group-hover:shadow-lg transition-all duration-300 flex items-center" style={{minWidth:130}}>
             <img
@@ -107,10 +109,12 @@ export default function Navbar() {
               className="h-8 w-auto object-contain block"
               loading="eager"
               width="120" height="32"
+              onError={e => { e.target.onerror=null; e.target.src='https://buildmate.in/images/Buildmate_logo_rbg.png' }}
             />
           </div>
         </Link>
 
+        {/* Desktop nav */}
         <nav className="hidden xl:flex items-center" aria-label="Main navigation">
           {NAV.map(item => (
             <div key={item.label} className="relative"
@@ -125,7 +129,7 @@ export default function Navbar() {
                 {item.sub && <ChevronDown size={10} className={'transition-transform '+(activeDD===item.label?'rotate-180':'')}/>}
               </NavLink>
               <AnimatePresence>
-                {item.sub && activeDD===item.label && <Dropdown items={item.sub} onClose={() => setActiveDD(null)}/>} 
+                {item.sub && activeDD===item.label && <Dropdown items={item.sub} onClose={() => setActiveDD(null)}/>}
               </AnimatePresence>
             </div>
           ))}
@@ -137,7 +141,7 @@ export default function Navbar() {
         </div>
 
         <button onClick={() => setOpen(!open)} className="xl:hidden text-slate-300 p-2" aria-label={open?'Close':'Open menu'}>
-          {open ? <X size={22}/> : <Menu size={22}/>} 
+          {open ? <X size={22}/> : <Menu size={22}/>}
         </button>
       </div>
 

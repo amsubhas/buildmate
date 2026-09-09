@@ -24,7 +24,7 @@ const events = [
     type:'Trade Show', status:'Past',
     title:'World of Concrete 2024',
     date:'23–25 January 2024', location:'Las Vegas, Nevada, USA',
-    img:'/images/Excon_13th_edition.jpeg',
+    img:'/images/World_of_concrete_2024.jpg',
     desc:'International participation at World of Concrete 2024 — engaging with global concrete industry leaders on advanced batching plant technology and precast solutions.'
   },
   {
@@ -45,7 +45,7 @@ const events = [
     type:'Trade Show', status:'Past',
     title:'Gujarat Conex 2023',
     date:'21–23 September 2023', location:'Gujarat, India',
-    img:'/images/Excon_13th_edition.jpeg',
+    img:'/images/World_of_concrete_2024.jpg',
     desc:'Buildmate at Gujarat Conex — demonstrating concrete production solutions, batching plants and mixer technology for the rapidly growing Gujarat construction market.'
   },
   {
@@ -116,7 +116,7 @@ function EventCard({ event:e }) {
       <div className="w-36 sm:w-48 shrink-0 overflow-hidden">
         <img src={e.img} alt={e.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-65"
-          onError={e2 => { e.target.style.display='none' }}/>
+          onError={e2 => { e2.target.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=60'; e2.target.style.opacity='0.3' }}/>
       </div>
       <div className="p-5 flex flex-col justify-between flex-1">
         <div>

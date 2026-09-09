@@ -13,23 +13,23 @@ export default {
         },
         // Official Buildmate Brand Colors
         brand: {
-          DEFAULT: '#192D78',   // Primary Blue
-          dark:    '#13245F',
-          mid:     '#2F4590',
-          light:   '#52639F',
+          DEFAULT: '#233C82',   // Primary Blue
+          dark:    '#1B2F6A',
+          mid:     '#465A96',
+          light:   '#6473A5',
         },
         red: {
-          DEFAULT: '#C8281E',   // Primary Red
+          DEFAULT: '#D72D23',   // Primary Red
           dark:    '#B8241B',
           600:     '#D73732',
           400:     '#DC5550',
         },
         accent: {
-          DEFAULT: '#192D78',
-          dark:    '#13245F',
-          light:   '#2F4590',
+          DEFAULT: '#233C82',
+          dark:    '#1B2F6A',
+          light:   '#465A96',
         },
-        gold: '#C8281E',   // Red replaces old orange
+        gold: '#D72D23',   // Red replaces old orange
       },
       fontFamily: {
         sans:    ['Inter', 'system-ui', 'sans-serif'],
@@ -37,8 +37,8 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'brand-gradient':  'linear-gradient(135deg, #192D78 0%, #2F4590 100%)',
-        'red-gradient':    'linear-gradient(135deg, #C8281E 0%, #D73732 100%)',
+        'brand-gradient':  'linear-gradient(135deg, #233C82 0%, #465A96 100%)',
+        'red-gradient':    'linear-gradient(135deg, #D72D23 0%, #D73732 100%)',
       },
       animation: {
         'float':      'floatSide 8s ease-in-out infinite',
@@ -48,9 +48,9 @@ export default {
         'spin-slow':  'spin 8s linear infinite',
       },
       boxShadow: {
-        'brand':  '0 8px 32px rgba(25,45,120,0.35)',
-        'red':    '0 8px 32px rgba(200,40,30,0.35)',
-        'glow':   '0 0 30px rgba(25,45,120,0.25)',
+        'brand':  '0 8px 32px rgba(35,60,130,0.35)',
+        'red':    '0 8px 32px rgba(215,45,35,0.35)',
+        'glow':   '0 0 30px rgba(35,60,130,0.25)',
       }
     },
   },

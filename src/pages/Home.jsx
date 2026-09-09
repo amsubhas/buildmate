@@ -44,7 +44,7 @@ function Counter({ to, suffix='', duration=2200 }) {
 }
 
 // ── Floating background element ──────────────────────────────
-function FloatEl({ top, left, size, delay, color='rgba(25,45,120,0.06)' }) {
+function FloatEl({ top, left, size, delay, color='rgba(14,165,233,0.06)' }) {
   return (
     <motion.div
       className="absolute rounded-full pointer-events-none"
@@ -106,9 +106,9 @@ function HeroSection() {
       </AnimatePresence>
 
       {/* Floating decorative elements */}
-      <FloatEl top="15%" left="75%" size={180} delay={0} color="rgba(25,45,120,0.04)"/>
+      <FloatEl top="15%" left="75%" size={180} delay={0} color="rgba(14,165,233,0.04)"/>
       <FloatEl top="60%" left="80%" size={120} delay={1.5} color="rgba(249,115,22,0.04)"/>
-      <FloatEl top="30%" left="5%"  size={90}  delay={0.8} color="rgba(25,45,120,0.05)"/>
+      <FloatEl top="30%" left="5%"  size={90}  delay={0.8} color="rgba(14,165,233,0.05)"/>
 
       {/* Scan line */}
       <div className="hud-scan absolute inset-0 pointer-events-none overflow-hidden opacity-30"/>
@@ -149,7 +149,7 @@ function HeroSection() {
                     animate={{ opacity:1, y:0 }}
                     transition={{ delay: 0.15 + i * 0.06, ease:[0.22,1,0.36,1], duration:0.6 }}
                     className="inline-block mr-[0.3em]"
-                    style={{ color: i === 0 ? '#6E82C4' : undefined }}>
+                    style={{ color: i === 0 ? '#38bdf8' : undefined }}>
                     {word}
                   </motion.span>
                 ))}
@@ -202,7 +202,7 @@ function HeroSection() {
             { num:98, suf:'%', label:'Client Satisfaction' },
           ].map(s => (
             <motion.div key={s.label}
-              whileHover={{ backgroundColor:'rgba(25,45,120,0.04)' }}
+              whileHover={{ backgroundColor:'rgba(14,165,233,0.04)' }}
               className="py-4 px-5 text-center cursor-default transition-colors">
               <div className="font-display font-bold text-2xl text-accent">
                 <Counter to={s.num} suffix={s.suf}/>
@@ -242,9 +242,9 @@ const WHY = [
   { icon:Award,      title:'30+ Years Experience',      desc:'Engineering excellence since 1991. Three decades of trusted plant manufacturing and delivery.' },
   { icon:Layers,     title:'Turnkey Solutions',          desc:'Complete project from DPR, process design, procurement, manufacturing to commissioning.' },
   { icon:Cpu,        title:'Manufacturing Excellence',   desc:'In-house CNC fabrication. ISO-certified QA. Meticulous manufacturing at every stage.' },
-  { icon:Globe,      title:'Global Installations',       desc:'Engineering and project execution experience across building-material manufacturing projects.' },
+  { icon:Globe,      title:'Global Installations',       desc:'Plants commissioned across India, Middle East, Africa, SE Asia and 20+ countries.' },
   { icon:TrendingUp, title:'R&D & Innovation',           desc:'Dedicated R&D driving proprietary autoclave designs, new materials and automation tech.' },
-  { icon:Shield,     title:'Quality & Reliability',        desc:'Proven technology, in-house manufacturing and quality assurance carried through from design to plant performance.' },
+  { icon:Shield,     title:'Sustainability',             desc:'AAC, fly ash brick and carbon-capture tech at the core — building greener industries.' },
 ]
 
 const ADVANTAGES = [
@@ -263,10 +263,10 @@ const SERVICES_PREVIEW = [
 ]
 
 const STATS = [
-  { num:'30+', label:'Years of Experience' },
-  { num:'1991', label:'Year Established' },
-  { num:'10', label:'Core Product Lines' },
-  { num:'31', label:'Published Project Records' },
+  { num:'30+', label:'Years Since 1991' },
+  { num:'500+', label:'Plants Installed' },
+  { num:'20+', label:'Countries Served' },
+  { num:'98%', label:'Client Satisfaction' },
 ]
 
 // Real testimonials with live-site logo images
@@ -289,7 +289,7 @@ const CLIENT_LOGOS = [
 const NEWS_ITEMS = [
   { cat:'Exhibition', title:'EXCON 13th Edition 2025', date:'09–13 Dec 2025', location:'Bengaluru', img:'/images/Excon_13th_edition.jpg', status:'Upcoming' },
   { cat:'Conference', title:'Fly Ash Utilisation Conference 2024', date:'22–24 Feb 2024', location:'Goa', img:'/images/fly_ash_utilisation_conference_2024.jpg', status:'Past' },
-  { cat:'Trade Show', title:'World of Concrete 2024', date:'23–25 Jan 2024', location:'Las Vegas, USA', img:'/images/Excon_13th_edition.jpeg', status:'Past' },
+  { cat:'Trade Show', title:'World of Concrete 2024', date:'23–25 Jan 2024', location:'Las Vegas, USA', img:'/images/World_of_concrete_2024.jpg', status:'Past' },
 ]
 
 
@@ -348,11 +348,11 @@ function AboutSection() {
             <p className="text-slate-400 leading-relaxed mb-6">
               Our manufacturing facility in Gundlapochampally, Hyderabad features advanced CNC infrastructure, precision fabrication
               workshops and a dedicated R&D laboratory — enabling us to deliver complete turnkey plant solutions with unmatched quality.
-              Led by CEO Mr. M. Venkata Ratnam, Buildmate combines engineering, project management and manufacturing capabilities to deliver
+              Led by CEO Mr. M. Venkata Ratnam, our engineering team of 200+ skilled professionals ensures every project is delivered
               on time, within budget and to specification.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-7">
-              {[['Since 1991','Engineering heritage'],['1991','Year established'],['30+ Years','Project experience'],['Concept → Commissioning','Turnkey delivery']].map(([n,l]) => (
+              {[['Since 1991','Engineering heritage'],['500+ Plants','Installed globally'],['20+ Countries','Global reach'],['ISO 9001:2015','Quality certified']].map(([n,l]) => (
                 <div key={n} className="p-4 bg-navy-800 rounded-lg border border-white/5">
                   <div className="font-display font-bold text-lg text-accent mb-1">{n}</div>
                   <div className="text-xs text-slate-400">{l}</div>
@@ -368,7 +368,7 @@ function AboutSection() {
             <div className="rounded-xl overflow-hidden border border-white/10">
               <img src="/images/banner_whoweare.jpg" alt="Buildmate Engineering"
                 className="w-full h-[400px] object-cover opacity-80"
-                onError={e => { e.target.style.display='none' }}/>
+                onError={e => { e.target.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80'; e.target.style.opacity='0.6' }}/>
             </div>
             <div className="absolute -bottom-4 -left-4 glass p-4 rounded-xl border border-accent/20 text-center min-w-[140px]">
               <div className="font-display font-bold text-3xl text-accent mb-1">₹2000Cr+</div>
@@ -424,7 +424,7 @@ function AdvantagesSection() {
               <div className="h-48 overflow-hidden">
                 <img src={a.img} alt={a.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
-                  onError={e => { e.target.style.display='none' }}/>
+                  onError={e => { e.target.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=60'; e.target.style.opacity='0.4' }}/>
                 <div className="absolute inset-0" style={{background:'linear-gradient(to top, rgba(13,31,60,0.9), transparent)'}}/>
               </div>
               <div className="p-6">
@@ -477,7 +477,8 @@ function GlobalSection() {
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950"/>
-      <div className="absolute inset-0 bg-grid opacity-20"/>
+      <div className="absolute inset-0 opacity-[0.04]"
+        style={{ backgroundImage:'url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png)', backgroundSize:'cover', backgroundPosition:'center', filter:'invert(1)' }}/>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div className="text-center mb-14" variants={FV} initial="hidden" whileInView="visible" viewport={VP}>
           <p className="section-label justify-center mb-2">Plants Under Operation</p>
@@ -485,7 +486,7 @@ function GlobalSection() {
           <p className="text-slate-400 max-w-xl mx-auto">From India to Saudi Arabia, UAE, Nigeria and beyond — Buildmate plants power industrial growth worldwide.</p>
         </motion.div>
         <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12" variants={SC} initial="hidden" whileInView="visible" viewport={VP}>
-          {[['22','Published Under Operation'],['9','Published Under Execution'],['1991','Year Established'],['10','Core Product Lines']].map(([n,l]) => (
+          {[['500+','Plants Under Operation'],['20+','Countries Served'],['1991','Year Established'],['200+','Skilled Engineers']].map(([n,l]) => (
             <motion.div key={l} variants={FV} className="glass rounded-xl p-6 text-center">
               <div className="font-display font-bold text-4xl text-accent mb-2">{n}</div>
               <div className="text-slate-300 text-xs uppercase tracking-wider font-display">{l}</div>
@@ -513,7 +514,7 @@ function AACSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div className="text-center mb-12" variants={FV} initial="hidden" whileInView="visible" viewport={VP}>
           <p className="section-label justify-center mb-2">Why AAC Blocks</p>
-          <h2 className="section-title text-4xl text-white">Why AAC Remains a Core Building Material</h2>
+          <h2 className="section-title text-4xl text-white">7 Reasons Why AAC Is the Future</h2>
           <p className="text-slate-400 max-w-2xl mx-auto mt-3">Autoclaved Aerated Concrete blocks outperform traditional red bricks on every parameter — strength, weight, insulation, speed and sustainability.</p>
         </motion.div>
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" variants={SC} initial="hidden" whileInView="visible" viewport={VP}>
@@ -624,7 +625,7 @@ function NewsSection() {
               <div className="h-44 overflow-hidden relative">
                 <img src={n.img} alt={n.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
-                  onError={e => { e.target.style.display='none' }}/>
+                  onError={e => { e.target.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=60'; e.target.style.opacity='0.4' }}/>
                 {n.status === 'Upcoming' && (
                   <div className="absolute top-3 left-3 bg-green-500 text-white text-xs font-display font-bold uppercase tracking-wide px-2 py-0.5 rounded">Upcoming</div>
                 )}
@@ -712,11 +713,11 @@ function AACSisterStrip() {
 // ═══════════════════════════════════════════════════════
 function NexGigaSection() {
   const nodes = [
-    { id:'nexgiga', label:'NexGiga', sub:'Parent Ecosystem', color:'#192D78', size:'lg', x:50, y:10 },
-    { id:'buildmate', label:'BuildMate', sub:'Execution Arm', color:'#C8281E', size:'md', x:20, y:55 },
-    { id:'nexbuild', label:'NexBuild', sub:'Construction Tech', color:'#2F4590', size:'md', x:50, y:55 },
-    { id:'nextech', label:'NexTech', sub:'Digital Solutions', color:'#2F4590', size:'md', x:80, y:55 },
-    { id:'smart', label:'Smart Infra', sub:'Infrastructure AI', color:'#52639F', size:'sm', x:50, y:85 },
+    { id:'nexgiga', label:'NexGiga', sub:'Parent Ecosystem', color:'#233C82', size:'lg', x:50, y:10 },
+    { id:'buildmate', label:'BuildMate', sub:'Execution Arm', color:'#D72D23', size:'md', x:20, y:55 },
+    { id:'nexbuild', label:'NexBuild', sub:'Construction Tech', color:'#465A96', size:'md', x:50, y:55 },
+    { id:'nextech', label:'NexTech', sub:'Digital Solutions', color:'#465A96', size:'md', x:80, y:55 },
+    { id:'smart', label:'Smart Infra', sub:'Infrastructure AI', color:'#6473A5', size:'sm', x:50, y:85 },
   ]
   return (
     <section className="py-24 bg-navy-950 relative overflow-hidden">
@@ -746,16 +747,16 @@ function NexGigaSection() {
             </div>
             {/* Connector lines */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
-              <line x1="50%" y1="100" x2="22%" y2="210" stroke="rgba(25,45,120,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
-              <line x1="50%" y1="100" x2="50%" y2="210" stroke="rgba(25,45,120,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
-              <line x1="50%" y1="100" x2="78%" y2="210" stroke="rgba(25,45,120,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
+              <line x1="50%" y1="100" x2="22%" y2="210" stroke="rgba(35,60,130,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
+              <line x1="50%" y1="100" x2="50%" y2="210" stroke="rgba(35,60,130,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
+              <line x1="50%" y1="100" x2="78%" y2="210" stroke="rgba(35,60,130,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
             </svg>
             {/* Child nodes */}
             <div className="absolute bottom-8 left-0 right-0 flex justify-around px-4">
               {[
-                {label:'BuildMate', sub:'Execution', color:'#C8281E'},
-                {label:'NexBuild', sub:'Construction', color:'#2F4590'},
-                {label:'NexTech', sub:'Digital', color:'#52639F'},
+                {label:'BuildMate', sub:'Execution', color:'#D72D23'},
+                {label:'NexBuild', sub:'Construction', color:'#465A96'},
+                {label:'NexTech', sub:'Digital', color:'#6473A5'},
               ].map(n => (
                 <div key={n.label} className="flex flex-col items-center gap-1">
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center border-2 shadow-lg"
@@ -1125,6 +1126,10 @@ export default function Home() {
       <NewsSection/>
       <ProvenExecutionSection/>
       <SustainabilitySection/>
+      <VisionJourneySection/>
+      <NexGigaSection/>
+      <PhysicalAISection/>
+      <SmartCommunitiesSection/>
       <ContactCTA/>
     </>
   )
