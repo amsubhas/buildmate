@@ -7,7 +7,7 @@ const SC = { hidden:{}, visible:{transition:{staggerChildren:0.1}} }
 const VP = { once:true, margin:'-80px' }
 
 const milestones = [
-  { year:'1991', title:'Company Founded', desc:'Established in Hyderabad, marking the beginning of Buildmate's long-standing engineering and project execution journey.' },
+  { year:'1991', title:'Company Founded', desc:"Established in Hyderabad, marking the beginning of Buildmate's long-standing engineering and project execution journey." },
   { year:'2000', title:'First International Project', desc:"Commissioned first plant in the Middle East — marking the start of Buildmate's global expansion." },
   { year:'2005', title:'AAC Technology Leadership', desc:"Became one of India's foremost AAC plant manufacturers with multiple large-capacity installations." },
   { year:'2010', title:'100 Plants Milestone', desc:'Delivered 100th industrial plant installation. Expanded into Africa and South East Asia.' },
