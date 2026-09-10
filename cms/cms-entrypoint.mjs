@@ -1,13 +1,16 @@
 import { spawn } from 'node:child_process';
 
+const runtimePort = Number(process.env.PORT || 8055);
+const localDirectusUrl = `http://127.0.0.1:${runtimePort}`;
+
 const directus = spawn(process.execPath, ['/directus/docker-entrypoint.cjs'], {
   stdio: 'inherit',
   env: process.env,
 });
 
-const pingUrl = 'http://127.0.0.1:8055/server/ping';
+const pingUrl = `${localDirectusUrl}/server/ping`;
 
-async function waitForDirectus(timeoutMs = 120000) {
+async function waitForDirectus(timeoutMs = 180000) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     try {
@@ -16,13 +19,16 @@ async function waitForDirectus(timeoutMs = 120000) {
     } catch {}
     await new Promise((resolve) => setTimeout(resolve, 2000));
   }
-  throw new Error('Directus did not become ready within 120 seconds');
+  throw new Error(`Directus did not become ready within ${timeoutMs / 1000} seconds on ${pingUrl}`);
 }
 
 async function runScript(script) {
   const child = spawn(process.execPath, [`/directus/${script}`], {
     stdio: 'inherit',
-    env: process.env,
+    env: {
+      ...process.env,
+      DIRECTUS_URL: localDirectusUrl,
+    },
   });
   const result = await new Promise((resolve, reject) => {
     child.on('error', reject);
