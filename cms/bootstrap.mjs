@@ -12,7 +12,8 @@ async function request(url, options = {}) {
     headers: { 'Content-Type': 'application/json', ...(options.headers || {}) }
   });
   const text = await res.text();
-  let body; try { body = text ? JSON.parse(text) : null; } catch { body = text; }
+  let body;
+  try { body = text ? JSON.parse(text) : null; } catch { body = text; }
   if (!res.ok) throw new Error(`${options.method || 'GET'} ${url} -> ${res.status}: ${JSON.stringify(body)}`);
   return body;
 }
@@ -33,9 +34,14 @@ const token = await login();
 const auth = { Authorization: `Bearer ${token}` };
 const allCollections = schema.collections.map(c => c.name);
 
+async function listAll(path) {
+  const body = await request(`${path}${path.includes('?') ? '&' : '?'}limit=-1`, { headers: auth });
+  return body.data || [];
+}
+
 async function getCollection(name) {
-  const body = await request('/collections?limit=-1', { headers: auth });
-  return body.data?.find(item => item.collection === name) || null;
+  const rows = await listAll('/collections');
+  return rows.find(item => item.collection === name) || null;
 }
 
 for (const def of schema.collections) {
@@ -116,20 +122,41 @@ const relations = [
 
 async function relationExists(collection, field, related_collection) {
   const body = await request('/relations?limit=-1', { headers: auth });
-  return body.data?.some(item =>
-    item.collection === collection &&
-    item.field === field &&
-    item.related_collection === related_collection
-  ) || false;
+  return body.data?.some(item => item.collection === collection && item.field === field && item.related_collection === related_collection) || false;
 }
 
 for (const [collection, field, related_collection] of relations) {
   if (await relationExists(collection, field, related_collection)) continue;
-  await request('/relations', {
-    method:'POST',
-    headers:auth,
-    body:JSON.stringify({ collection, field, related_collection })
-  });
+  await request('/relations', { method:'POST', headers:auth, body:JSON.stringify({ collection, field, related_collection }) });
 }
 
-console.log(`BuildMate Directus foundation ready: ${allCollections.length} collections and ${relations.length} content relations.`);
+async function getPublicPolicy() {
+  const policies = await listAll('/policies');
+  return policies.find(item => item.name === 'Public') || policies.find(item => item.description === 'Public') || null;
+}
+
+async function ensurePublicRead(policyId, collection, permissions = null) {
+  const permissionsRows = await listAll('/permissions');
+  const existing = permissionsRows.find(item => item.policy === policyId && item.collection === collection && item.action === 'read');
+  const payload = {
+    policy: policyId,
+    collection,
+    action: 'read',
+    permissions,
+    validation: null,
+    presets: null,
+    fields: ['*']
+  };
+  if (existing) {
+    await request(`/permissions/${existing.id}`, { method:'PATCH', headers:auth, body:JSON.stringify(payload) });
+  } else {
+    await request('/permissions', { method:'POST', headers:auth, body:JSON.stringify(payload) });
+  }
+}
+
+const publicPolicy = await getPublicPolicy();
+if (!publicPolicy?.id) throw new Error('Directus Public policy was not found');
+await ensurePublicRead(publicPolicy.id, 'brochures', { status: { _eq: 'published' } });
+await ensurePublicRead(publicPolicy.id, 'directus_files');
+
+console.log(`BuildMate Directus foundation ready: ${allCollections.length} collections, ${relations.length} content relations, and public brochure/file read access.`);
