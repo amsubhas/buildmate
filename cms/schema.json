@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "project": "BuildMate",
   "collections": [
     {"name":"company","singleton":true,"note":"Approved company-wide identity, contact and brand content."},
@@ -20,6 +20,7 @@
     {"name":"careers","note":"Career opportunities."}
   ],
   "workflow": ["draft","review","approved","published"],
+  "brochure_fields": ["title","slug","category","tag","pdf","pages","version","description","featured","sort","status"],
   "principles": [
     "Business content lives in Directus; React/Vite code remains in GitHub.",
     "Only approved claims may be published.",
