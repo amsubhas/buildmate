@@ -1,0 +1,48 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-buildmate}
+      POSTGRES_USER: ${POSTGRES_USER:-buildmate}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - buildmate_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-buildmate} -d ${POSTGRES_DB:-buildmate}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  directus:
+    image: directus/directus:12.3.1
+    restart: unless-stopped
+    ports:
+      - "${DIRECTUS_PORT:-8055}:8055"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SECRET: ${DIRECTUS_SECRET:?Set DIRECTUS_SECRET in .env}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:?Set ADMIN_EMAIL in .env}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in .env}
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:8055}
+      DB_CLIENT: pg
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: ${POSTGRES_DB:-buildmate}
+      DB_USER: ${POSTGRES_USER:-buildmate}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      CORS_ENABLED: "true"
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:5173}
+      WEBSOCKETS_ENABLED: "true"
+      STORAGE_LOCATIONS: local
+      STORAGE_LOCAL_ROOT: ./uploads
+      ASSETS_CACHE_TTL: 86400
+      ASSETS_CACHE_REVALIDATE: "true"
+    volumes:
+      - buildmate_uploads:/directus/uploads
+
+volumes:
+  buildmate_db:
+  buildmate_uploads:
