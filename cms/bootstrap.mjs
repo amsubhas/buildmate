@@ -65,19 +65,19 @@ const fields = {
   ],
   product_categories: [['name','string',{}],['description','text',{}],['sort','integer',{defaultValue:0}]],
   products: [
-    ['category','uuid',{interface:'select-dropdown-m2o'}],['name','string',{}],['short_description','text',{}],['description','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}],['gallery','json',{interface:'list'}],['applications','json',{interface:'list'}],['features','json',{interface:'list'}],['capacity','string',{}],['raw_materials','text',{}],['process','text',{interface:'input-rich-text-html'}],['advantages','json',{interface:'list'}],['brochure','uuid',{interface:'select-dropdown-m2o'}]
+    ['category','integer',{interface:'select-dropdown-m2o'}],['name','string',{}],['short_description','text',{}],['description','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}],['gallery','json',{interface:'list'}],['applications','json',{interface:'list'}],['features','json',{interface:'list'}],['capacity','string',{}],['raw_materials','text',{}],['process','text',{interface:'input-rich-text-html'}],['advantages','json',{interface:'list'}],['brochure','integer',{interface:'select-dropdown-m2o'}]
   ],
-  product_specifications: [['product','uuid',{interface:'select-dropdown-m2o'}],['parameter','string',{}],['value','string',{}],['unit','string',{}],['sort','integer',{defaultValue:0}]],
+  product_specifications: [['product','integer',{interface:'select-dropdown-m2o'}],['parameter','string',{}],['value','string',{}],['unit','string',{}],['sort','integer',{defaultValue:0}]],
   solutions: [['name','string',{}],['type','string',{}],['short_description','text',{}],['description','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}]],
-  projects: [['product','uuid',{interface:'select-dropdown-m2o'}],['name','string',{}],['client','string',{}],['location','string',{}],['country','string',{}],['project_type','string',{}],['capacity','string',{}],['raw_material','string',{}],['year','integer',{}],['description','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}],['gallery','json',{interface:'list'}],['coordinates','json',{interface:'input-code'}],['featured','boolean',{defaultValue:false}]],
-  brochures: [['title','string',{}],['category','string',{}],['product','uuid',{interface:'select-dropdown-m2o'}],['cover','uuid',{special:'file',interface:'file-image'}],['pdf','uuid',{special:'file'}],['version','string',{defaultValue:'2026'}],['description','text',{}],['pages','integer',{interface:'input',note:'PDF page count.'}],['tag','string',{note:'Short merchandising label shown on the brochure card.'}],['featured','boolean',{defaultValue:false}]],
-  articles: [['product','uuid',{interface:'select-dropdown-m2o'}],['project','uuid',{interface:'select-dropdown-m2o'}],['title','string',{}],['excerpt','text',{}],['body','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}],['author','string',{}],['published_at','dateTime',{}]],
+  projects: [['product','integer',{interface:'select-dropdown-m2o'}],['name','string',{}],['client','string',{}],['location','string',{}],['country','string',{}],['project_type','string',{}],['capacity','string',{}],['raw_material','string',{}],['year','integer',{}],['description','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}],['gallery','json',{interface:'list'}],['coordinates','json',{interface:'input-code'}],['featured','boolean',{defaultValue:false}]],
+  brochures: [['title','string',{}],['category','string',{}],['product','integer',{interface:'select-dropdown-m2o'}],['cover','uuid',{special:'file',interface:'file-image'}],['pdf','uuid',{special:'file'}],['version','string',{defaultValue:'2026'}],['description','text',{}],['pages','integer',{interface:'input',note:'PDF page count.'}],['tag','string',{note:'Short merchandising label shown on the brochure card.'}],['featured','boolean',{defaultValue:false}]],
+  articles: [['product','integer',{interface:'select-dropdown-m2o'}],['project','integer',{interface:'select-dropdown-m2o'}],['title','string',{}],['excerpt','text',{}],['body','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}],['author','string',{}],['published_at','dateTime',{}]],
   news: [['title','string',{}],['excerpt','text',{}],['body','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}],['published_at','dateTime',{}]],
-  events: [['title','string',{}],['event_name','string',{}],['location','string',{}],['start_date','dateTime',{}],['end_date','dateTime',{}],['description','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file-image'}]],
-  faqs: [['question','string',{}],['answer','text',{interface:'input-rich-text-html'}],['product','uuid',{interface:'select-dropdown-m2o'}],['sort','integer',{defaultValue:0}]],
-  downloads: [['title','string',{}],['type','string',{}],['description','text',{}],['file','uuid',{special:'file',interface:'file'}],['product','uuid',{interface:'select-dropdown-m2o'}]],
+  events: [['title','string',{}],['event_name','string',{}],['location','string',{}],['start_date','dateTime',{}],['end_date','dateTime',{}],['description','text',{interface:'input-rich-text-html'}],['hero_image','uuid',{special:'file',interface:'file-image'}]],
+  faqs: [['question','string',{}],['answer','text',{interface:'input-rich-text-html'}],['product','integer',{interface:'select-dropdown-m2o'}],['sort','integer',{defaultValue:0}]],
+  downloads: [['title','string',{}],['type','string',{}],['description','text',{}],['file','uuid',{special:'file',interface:'file'}],['product','integer',{interface:'select-dropdown-m2o'}]],
   customers: [['name','string',{}],['logo','uuid',{special:'file',interface:'file-image'}],['description','text',{}]],
-  testimonials: [['customer','uuid',{interface:'select-dropdown-m2o'}],['quote','text',{}],['person_name','string',{}],['person_role','string',{}]],
+  testimonials: [['customer','integer',{interface:'select-dropdown-m2o'}],['quote','text',{}],['person_name','string',{}],['person_role','string',{}]],
   partners: [['name','string',{}],['logo','uuid',{special:'file',interface:'file-image'}],['website','string',{}],['description','text',{}]],
   careers: [['title','string',{}],['location','string',{}],['employment_type','string',{}],['description','text',{interface:'input-rich-text-html'}],['apply_url','string',{}],['closing_date','dateTime',{}]]
 };
@@ -90,11 +90,17 @@ async function getField(collection, field) {
 async function createField(collection, [field, type, opts]) {
   if (await getField(collection, field)) return;
   const { interface: ui, defaultValue, choices, hidden, special, note, ...rest } = opts || {};
-  const meta = { interface: ui, hidden: Boolean(hidden), ...(note ? { note } : {}), ...(choices ? { options: { choices } } : {}), ...rest };
+  const meta = {
+    interface: ui,
+    hidden: Boolean(hidden),
+    ...(note ? { note } : {}),
+    ...(choices ? { options: { choices } } : {}),
+    ...(special ? { special: Array.isArray(special) ? special : [special] } : {}),
+    ...rest
+  };
   Object.keys(meta).forEach(k => meta[k] === undefined && delete meta[k]);
   const payload = { field, type, meta, schema: { is_nullable: !['name','title','question'].includes(field) } };
   if (defaultValue !== undefined) payload.schema.default_value = defaultValue;
-  if (special) payload.special = special;
   await request(`/fields/${collection}`, { method:'POST', headers:auth, body:JSON.stringify(payload) });
 }
 
@@ -108,14 +114,22 @@ const relations = [
   ['brochures','product','products'],['articles','product','products'],['articles','project','projects'],['faqs','product','products'],['downloads','product','products'],['testimonials','customer','customers']
 ];
 
-async function relationExists(manyCollection, manyField) {
+async function relationExists(collection, field, related_collection) {
   const body = await request('/relations?limit=-1', { headers: auth });
-  return body.data?.some(item => item.many_collection === manyCollection && item.many_field === manyField) || false;
+  return body.data?.some(item =>
+    item.collection === collection &&
+    item.field === field &&
+    item.related_collection === related_collection
+  ) || false;
 }
 
-for (const [many_collection, many_field, one_collection] of relations) {
-  if (await relationExists(many_collection, many_field)) continue;
-  await request('/relations', { method:'POST', headers:auth, body:JSON.stringify({ many_collection, many_field, one_collection, one_field:null, one_deselect_action:'nullify' }) });
+for (const [collection, field, related_collection] of relations) {
+  if (await relationExists(collection, field, related_collection)) continue;
+  await request('/relations', {
+    method:'POST',
+    headers:auth,
+    body:JSON.stringify({ collection, field, related_collection })
+  });
 }
 
 console.log(`BuildMate Directus foundation ready: ${allCollections.length} collections and ${relations.length} content relations.`);
