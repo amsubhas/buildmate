@@ -40,8 +40,9 @@ for (const signal of ['SIGINT', 'SIGTERM', 'SIGHUP', 'SIGQUIT']) {
 try {
   await waitForDirectus();
   await runScript('bootstrap.mjs');
+  await runScript('configure-public.mjs');
   await runScript('migrate-brochures.mjs');
-  console.log('BuildMate CMS bootstrap and original brochure migration completed successfully.');
+  console.log('BuildMate CMS bootstrap, public access, and original brochure migration completed successfully.');
 } catch (error) {
   console.error(error?.stack ?? error);
   directus.kill('SIGTERM');
