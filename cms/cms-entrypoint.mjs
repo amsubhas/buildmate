@@ -19,8 +19,8 @@ async function waitForDirectus(timeoutMs = 120000) {
   throw new Error('Directus did not become ready within 120 seconds');
 }
 
-async function runMigration() {
-  const child = spawn(process.execPath, ['/directus/migrate-brochures.mjs'], {
+async function runScript(script) {
+  const child = spawn(process.execPath, [`/directus/${script}`], {
     stdio: 'inherit',
     env: process.env,
   });
@@ -29,7 +29,7 @@ async function runMigration() {
     child.on('exit', (code, signal) => resolve({ code, signal }));
   });
   if (result.signal || result.code !== 0) {
-    throw new Error(`Brochure migration failed (code=${result.code}, signal=${result.signal ?? 'none'})`);
+    throw new Error(`${script} failed (code=${result.code}, signal=${result.signal ?? 'none'})`);
   }
 }
 
@@ -39,8 +39,9 @@ for (const signal of ['SIGINT', 'SIGTERM', 'SIGHUP', 'SIGQUIT']) {
 
 try {
   await waitForDirectus();
-  await runMigration();
-  console.log('BuildMate original brochure migration completed successfully.');
+  await runScript('bootstrap.mjs');
+  await runScript('migrate-brochures.mjs');
+  console.log('BuildMate CMS bootstrap and original brochure migration completed successfully.');
 } catch (error) {
   console.error(error?.stack ?? error);
   directus.kill('SIGTERM');
