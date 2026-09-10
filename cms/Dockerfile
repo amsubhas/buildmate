@@ -11,6 +11,11 @@ COPY cms-entrypoint.mjs /directus/cms-entrypoint.mjs
 
 RUN chown node:node /directus/schema.json /directus/bootstrap.mjs /directus/brochure-sources.json /directus/configure-public.mjs /directus/migrate-brochures.mjs /directus/cms-entrypoint.mjs
 
+# Render's smallest staging instance is resource-constrained during the one-time
+# schema bootstrap. Directus' pressure limiter otherwise turns legitimate startup
+# work into 503 responses and the bootstrap aborts, taking the service down.
+ENV PRESSURE_LIMITER_ENABLED=false
+
 USER node
 
 ENTRYPOINT ["node", "/directus/cms-entrypoint.mjs"]
