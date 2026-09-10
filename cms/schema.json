@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "project": "BuildMate",
+  "collections": [
+    {"name":"company","singleton":true,"note":"Approved company-wide identity, contact and brand content."},
+    {"name":"product_categories","note":"Controlled product taxonomy."},
+    {"name":"products","note":"Canonical product and plant content."},
+    {"name":"product_specifications","note":"Structured technical specifications belonging to products."},
+    {"name":"solutions","note":"Solutions, services and capabilities presented by BuildMate."},
+    {"name":"projects","note":"Projects, installations and case studies."},
+    {"name":"brochures","note":"Canonical downloadable brochure records and PDF assets."},
+    {"name":"articles","note":"Engineering knowledge centre articles."},
+    {"name":"news","note":"Company and industry news."},
+    {"name":"events","note":"Exhibitions, events and appearances."},
+    {"name":"faqs","note":"Approved FAQ answers with product relationships."},
+    {"name":"downloads","note":"Datasheets, manuals, drawings, certificates and other resources."},
+    {"name":"customers","note":"Approved customer references."},
+    {"name":"testimonials","note":"Approved customer testimonials."},
+    {"name":"partners","note":"Approved technology and business partners."},
+    {"name":"careers","note":"Career opportunities."}
+  ],
+  "workflow": ["draft","review","approved","published"],
+  "brochure_fields": ["title","slug","category","tag","pdf","pages","version","description","featured","sort","status"],
+  "principles": [
+    "Business content lives in Directus; React/Vite code remains in GitHub.",
+    "Only approved claims may be published.",
+    "Media uses Directus Files; production should use durable object storage.",
+    "Public website access is read-only and never uses an admin token.",
+    "Brochures are records linked to Products, not hardcoded frontend paths."
+  ]
+}
