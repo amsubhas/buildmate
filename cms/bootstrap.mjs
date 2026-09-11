@@ -130,33 +130,4 @@ for (const [collection, field, related_collection] of relations) {
   await request('/relations', { method:'POST', headers:auth, body:JSON.stringify({ collection, field, related_collection }) });
 }
 
-async function getPublicPolicy() {
-  const policies = await listAll('/policies');
-  return policies.find(item => item.name === 'Public') || policies.find(item => item.description === 'Public') || null;
-}
-
-async function ensurePublicRead(policyId, collection, permissions = null) {
-  const permissionsRows = await listAll('/permissions');
-  const existing = permissionsRows.find(item => item.policy === policyId && item.collection === collection && item.action === 'read');
-  const payload = {
-    policy: policyId,
-    collection,
-    action: 'read',
-    permissions,
-    validation: null,
-    presets: null,
-    fields: ['*']
-  };
-  if (existing) {
-    await request(`/permissions/${existing.id}`, { method:'PATCH', headers:auth, body:JSON.stringify(payload) });
-  } else {
-    await request('/permissions', { method:'POST', headers:auth, body:JSON.stringify(payload) });
-  }
-}
-
-const publicPolicy = await getPublicPolicy();
-if (!publicPolicy?.id) throw new Error('Directus Public policy was not found');
-await ensurePublicRead(publicPolicy.id, 'brochures', { status: { _eq: 'published' } });
-await ensurePublicRead(publicPolicy.id, 'directus_files');
-
-console.log(`BuildMate Directus foundation ready: ${allCollections.length} collections, ${relations.length} content relations, and public brochure/file read access.`);
+console.log(`BuildMate Directus foundation ready: ${allCollections.length} collections and ${relations.length} content relations.`);
