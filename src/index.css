@@ -127,4 +127,17 @@ body {
 .hud-scan::before { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg,transparent,rgba(var(--bm-blue-rgb),0.42),transparent); animation: scan-line 4s linear infinite; pointer-events: none; }
 
 a:focus-visible, button:focus-visible { outline: 2px solid var(--bm-red); outline-offset: 3px; border-radius: 4px; }
+
+/* ── Store-reference theme normalization ──────────────────── */
+/* Keep the existing layout/animation system intact while removing legacy neon accents. */
+section[aria-label="Hero banner"] > .absolute.rounded-full.pointer-events-none {
+  background: rgba(var(--bm-blue-rgb),0.04) !important;
+}
+section[aria-label="Hero banner"] .section-title span[style] {
+  color: var(--bm-blue) !important;
+}
+section[aria-label="Hero banner"] .transition-colors:hover {
+  background-color: rgba(var(--bm-blue-rgb),0.04) !important;
+}
+
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
