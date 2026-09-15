@@ -66,10 +66,10 @@ main > section:not([aria-label="Hero banner"]) .bg-grid-sm {
     linear-gradient(90deg, rgba(25,45,120,0.055) 1px, transparent 1px) !important;
 }
 
-/* ── Critical readability fix: contain media overlays inside their image frames ──
-   Several existing cards use absolute inset overlays inside fixed-height image wrappers.
-   Those wrappers were not positioned, so the overlay could escape its card and wash an
-   entire section with a navy gradient. Position every overflow-hidden media frame locally. */
+/* ── Global containment fix for the readability conflict ──────────────────────
+   Existing cards use absolute inset overlays for image fades. When their media
+   wrapper is not positioned, the overlay can escape the card and cover the rest
+   of the section with a navy gradient. Apply the containment rule site-wide. */
 main > section:not([aria-label="Hero banner"]) [class*="overflow-hidden"][class*="h-"] {
   position: relative !important;
 }
@@ -77,14 +77,15 @@ main > section:not([aria-label="Hero banner"]) [class*="overflow-hidden"][class*
   position: relative !important;
 }
 main > section:not([aria-label="Hero banner"]) [class*="overflow-hidden"] > [class*="absolute"][class*="inset-0"] {
+  inset: 0 !important;
   max-width: 100%;
   max-height: 100%;
 }
 
-/* Do not allow a stray full-section absolute gradient to sit above readable content. */
+/* ── Kill stray full-section gradient overlays ────────────────────────────────
+   These are decorative layers only. They must never obscure typography or cards. */
 main > section:not([aria-label="Hero banner"]) > .absolute.inset-0[class*="bg-gradient"] {
-  pointer-events: none !important;
-  z-index: 0 !important;
+  display: none !important;
 }
 
 @media (max-width: 767px) {
