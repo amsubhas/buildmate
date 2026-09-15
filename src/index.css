@@ -69,11 +69,34 @@ body { background-color: #FFFFFF; color: var(--bm-text); font-family: 'Inter', s
 .skeleton { background: linear-gradient(90deg,#F7F8FA 25%,#E7EAF0 50%,#F7F8FA 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
 .hud-scan::before { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg,transparent,rgba(var(--bm-blue-rgb),0.28),rgba(var(--bm-red-rgb),0.20),transparent); animation: scan-line 4s linear infinite; pointer-events: none; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--bm-red); outline-offset: 3px; border-radius: 4px; }
-/* Store-reference theme: white surfaces, strong blue branding, strategic red accents. */
+/* Store-reference theme: white-first BuildMate presentation with exact blue/red brand hierarchy. */
 section[aria-label="Hero banner"] > .absolute.rounded-full.pointer-events-none { background: rgba(var(--bm-blue-rgb),0.035) !important; }
 section[aria-label="Hero banner"] .section-title span[style] { color: var(--bm-blue) !important; }
 section[aria-label="Hero banner"] .transition-colors:hover { background-color: rgba(var(--bm-blue-rgb),0.035) !important; }
 .bg-navy-950 .section-title { color: #FFFFFF; }
 .bg-navy-950 .section-label { color: var(--bm-red); }
 .bg-navy-950 .section-label::before { background: var(--bm-red); }
+
+/* ── Store-theme enforcement ──────────────────────────────── */
+/* The physical booth is white-led: keep dark imagery/hero treatments intact, but make
+   navigation, menus and light UI surfaces unmistakably BuildMate blue/red/white. */
+header.sticky { background: #FFFFFF !important; border-bottom-color: var(--bm-border) !important; box-shadow: 0 4px 18px rgba(var(--bm-blue-rgb),0.08); }
+header.sticky .text-slate-300 { color: var(--bm-deep-blue) !important; }
+header.sticky .text-slate-300:hover { color: var(--bm-blue) !important; }
+header.sticky .text-slate-400 { color: var(--bm-muted) !important; }
+header.sticky .text-slate-400:hover { color: var(--bm-blue) !important; }
+header.sticky .text-white { color: var(--bm-deep-blue) !important; }
+header.sticky .glass { background: rgba(255,255,255,0.98) !important; border-color: var(--bm-border) !important; box-shadow: 0 16px 36px rgba(var(--bm-blue-rgb),0.12); }
+header.sticky .border-white\/5,
+header.sticky .border-white\/10 { border-color: var(--bm-border) !important; }
+header.sticky .bg-white\/5 { background-color: rgba(var(--bm-blue-rgb),0.04) !important; }
+header.sticky .bg-red\/10 { background-color: rgba(var(--bm-red-rgb),0.08) !important; }
+header.sticky .border-t { border-top-color: var(--bm-border) !important; }
+header.sticky .border-l { border-left-color: var(--bm-border) !important; }
+
+/* Remove the remaining legacy neon/orange hero accents without changing layout or motion. */
+section[aria-label="Hero banner"] > .absolute.rounded-full.pointer-events-none { background: rgba(var(--bm-blue-rgb),0.04) !important; }
+section[aria-label="Hero banner"] .section-title span[style] { color: var(--bm-blue) !important; }
+section[aria-label="Hero banner"] .transition-colors { transition-property: background-color,color,border-color !important; }
+section[aria-label="Hero banner"] .transition-colors:hover { background-color: rgba(var(--bm-blue-rgb),0.04) !important; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
