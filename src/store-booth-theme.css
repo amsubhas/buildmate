@@ -66,61 +66,26 @@ main > section:not([aria-label="Hero banner"]) .bg-grid-sm {
     linear-gradient(90deg, rgba(25,45,120,0.055) 1px, transparent 1px) !important;
 }
 
-/* Readability guard: never allow inherited dark-gradient overlays to wash out text on
-   non-hero booth sections. These selectors intentionally leave the hero untouched. */
-main > section:not([aria-label="Hero banner"]) [class*="from-navy-"],
-main > section:not([aria-label="Hero banner"]) [class*="via-navy-"],
-main > section:not([aria-label="Hero banner"]) [class*="to-navy-"],
-main > section:not([aria-label="Hero banner"]) [class*="bg-gradient-to-"] {
-  background-image: none !important;
+/* ── Critical readability fix: contain media overlays inside their image frames ──
+   Several existing cards use absolute inset overlays inside fixed-height image wrappers.
+   Those wrappers were not positioned, so the overlay could escape its card and wash an
+   entire section with a navy gradient. Position every overflow-hidden media frame locally. */
+main > section:not([aria-label="Hero banner"]) [class*="overflow-hidden"][class*="h-"] {
+  position: relative !important;
+}
+main > section:not([aria-label="Hero banner"]) [class*="overflow-hidden"][class*="aspect-"] {
+  position: relative !important;
+}
+main > section:not([aria-label="Hero banner"]) [class*="overflow-hidden"] > [class*="absolute"][class*="inset-0"] {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-main > section:not([aria-label="Hero banner"]) [class*="bg-navy-"] {
-  background-color: var(--bm-booth-light) !important;
+/* Do not allow a stray full-section absolute gradient to sit above readable content. */
+main > section:not([aria-label="Hero banner"]) > .absolute.inset-0[class*="bg-gradient"] {
+  pointer-events: none !important;
+  z-index: 0 !important;
 }
-
-main > section:not([aria-label="Hero banner"]) .text-white,
-main > section:not([aria-label="Hero banner"]) [class*="text-slate-"] {
-  color: var(--bm-booth-deep) !important;
-}
-
-main > section:not([aria-label="Hero banner"]) [class*="text-slate-400"],
-main > section:not([aria-label="Hero banner"]) [class*="text-slate-500"] {
-  color: #6B7280 !important;
-}
-
-main > section:not([aria-label="Hero banner"]) [class*="divide-white"],
-main > section:not([aria-label="Hero banner"]) [class*="border-white"] {
-  border-color: var(--bm-booth-border) !important;
-}
-
-main > section:not([aria-label="Hero banner"]) [class*="bg-white\/"],
-main > section:not([aria-label="Hero banner"]) [class*="bg-black\/"],
-main > section:not([aria-label="Hero banner"]) [class*="bg-navy-"] {
-  border-color: var(--bm-booth-border) !important;
-}
-
-/* Keep important blue identity numbers/icons blue, while preserving readable supporting text. */
-main > section:not([aria-label="Hero banner"]) [class*="text-accent"],
-main > section:not([aria-label="Hero banner"]) [class*="text-blue-"] {
-  color: var(--bm-booth-blue) !important;
-}
-
-/* Semantic sustainability accents use the approved blue/red identity instead of green decoration. */
-main > section:not([aria-label="Hero banner"]) [class*="text-green-"],
-main > section:not([aria-label="Hero banner"]) [class*="border-green-"] {
-  color: var(--bm-booth-blue) !important;
-  border-color: rgba(25,45,120,0.20) !important;
-}
-main > section:not([aria-label="Hero banner"]) [class*="bg-green-"] {
-  background-color: rgba(25,45,120,0.06) !important;
-}
-
-/* Hero headline: white for readability over industrial photography, red lead word for booth identity. */
-main > section[aria-label="Hero banner"] .section-title { color: #FFFFFF !important; }
-main > section[aria-label="Hero banner"] .section-title span[style] { color: var(--bm-booth-red) !important; }
-main > section[aria-label="Hero banner"] .section-label { color: #FFFFFF !important; }
-main > section[aria-label="Hero banner"] .section-label::before { background: var(--bm-booth-red) !important; }
 
 @media (max-width: 767px) {
   main > section:not([aria-label="Hero banner"]) > div > div:first-child::before { width: 30px; }
