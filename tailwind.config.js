@@ -5,52 +5,35 @@ export default {
     extend: {
       colors: {
         navy: {
-          950: '#010C1E',
-          900: '#071428',
-          800: '#0D1F42',
-          700: '#122550',
-          600: '#1A2F60',
+          950: '#07112F', 900: '#0B183D', 800: '#10245F', 700: '#162F72', 600: '#1C3B87',
         },
-        // Official Buildmate Brand Colors
         brand: {
-          DEFAULT: '#233C82',   // Primary Blue
-          dark:    '#1B2F6A',
-          mid:     '#465A96',
-          light:   '#6473A5',
+          DEFAULT: '#192D78', dark: '#10245F', mid: '#29469A', light: '#536BB2',
         },
         red: {
-          DEFAULT: '#D72D23',   // Primary Red
-          dark:    '#B8241B',
-          600:     '#D73732',
-          400:     '#DC5550',
+          DEFAULT: '#C8281E', dark: '#A82018', 600: '#C8281E', 400: '#D9564D',
         },
         accent: {
-          DEFAULT: '#233C82',
-          dark:    '#1B2F6A',
-          light:   '#465A96',
+          DEFAULT: '#192D78', dark: '#10245F', light: '#536BB2',
         },
-        gold: '#D72D23',   // Red replaces old orange
+        gold: '#C8281E',
       },
       fontFamily: {
-        sans:    ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Rajdhani', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'brand-gradient':  'linear-gradient(135deg, #233C82 0%, #465A96 100%)',
-        'red-gradient':    'linear-gradient(135deg, #D72D23 0%, #D73732 100%)',
+        'brand-gradient': 'linear-gradient(135deg, #192D78 0%, #29469A 100%)',
+        'red-gradient': 'linear-gradient(135deg, #C8281E 0%, #D9564D 100%)',
       },
       animation: {
-        'float':      'floatSide 8s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-        'shimmer':    'shimmer 1.5s infinite',
-        'marquee':    'marquee 30s linear infinite',
-        'spin-slow':  'spin 8s linear infinite',
+        'float': 'floatSide 8s ease-in-out infinite', 'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+        'shimmer': 'shimmer 1.5s infinite', 'marquee': 'marquee 30s linear infinite', 'spin-slow': 'spin 8s linear infinite',
       },
       boxShadow: {
-        'brand':  '0 8px 32px rgba(35,60,130,0.35)',
-        'red':    '0 8px 32px rgba(215,45,35,0.35)',
-        'glow':   '0 0 30px rgba(35,60,130,0.25)',
+        'brand': '0 8px 32px rgba(25,45,120,0.30)', 'red': '0 8px 32px rgba(200,40,30,0.28)',
+        'glow': '0 0 30px rgba(25,45,120,0.22)',
       }
     },
   },

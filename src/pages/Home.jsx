@@ -44,7 +44,7 @@ function Counter({ to, suffix='', duration=2200 }) {
 }
 
 // ── Floating background element ──────────────────────────────
-function FloatEl({ top, left, size, delay, color='rgba(14,165,233,0.06)' }) {
+function FloatEl({ top, left, size, delay, color='rgba(25,45,120,0.06)' }) {
   return (
     <motion.div
       className="absolute rounded-full pointer-events-none"
@@ -105,10 +105,10 @@ function HeroSection() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Floating decorative elements */}
-      <FloatEl top="15%" left="75%" size={180} delay={0} color="rgba(14,165,233,0.04)"/>
-      <FloatEl top="60%" left="80%" size={120} delay={1.5} color="rgba(249,115,22,0.04)"/>
-      <FloatEl top="30%" left="5%"  size={90}  delay={0.8} color="rgba(14,165,233,0.05)"/>
+      {/* Floating decorative elements — BuildMate blue/red palette */}
+      <FloatEl top="15%" left="75%" size={180} delay={0} color="rgba(25,45,120,0.04)"/>
+      <FloatEl top="60%" left="80%" size={120} delay={1.5} color="rgba(200,40,30,0.04)"/>
+      <FloatEl top="30%" left="5%"  size={90}  delay={0.8} color="rgba(25,45,120,0.05)"/>
 
       {/* Scan line */}
       <div className="hud-scan absolute inset-0 pointer-events-none overflow-hidden opacity-30"/>
@@ -149,7 +149,7 @@ function HeroSection() {
                     animate={{ opacity:1, y:0 }}
                     transition={{ delay: 0.15 + i * 0.06, ease:[0.22,1,0.36,1], duration:0.6 }}
                     className="inline-block mr-[0.3em]"
-                    style={{ color: i === 0 ? '#38bdf8' : undefined }}>
+                    style={{ color: i === 0 ? '#192D78' : undefined }}>
                     {word}
                   </motion.span>
                 ))}
@@ -202,7 +202,7 @@ function HeroSection() {
             { num:98, suf:'%', label:'Client Satisfaction' },
           ].map(s => (
             <motion.div key={s.label}
-              whileHover={{ backgroundColor:'rgba(14,165,233,0.04)' }}
+              whileHover={{ backgroundColor:'rgba(25,45,120,0.04)' }}
               className="py-4 px-5 text-center cursor-default transition-colors">
               <div className="font-display font-bold text-2xl text-accent">
                 <Counter to={s.num} suffix={s.suf}/>
@@ -713,11 +713,11 @@ function AACSisterStrip() {
 // ═══════════════════════════════════════════════════════
 function NexGigaSection() {
   const nodes = [
-    { id:'nexgiga', label:'NexGiga', sub:'Parent Ecosystem', color:'#233C82', size:'lg', x:50, y:10 },
-    { id:'buildmate', label:'BuildMate', sub:'Execution Arm', color:'#D72D23', size:'md', x:20, y:55 },
-    { id:'nexbuild', label:'NexBuild', sub:'Construction Tech', color:'#465A96', size:'md', x:50, y:55 },
-    { id:'nextech', label:'NexTech', sub:'Digital Solutions', color:'#465A96', size:'md', x:80, y:55 },
-    { id:'smart', label:'Smart Infra', sub:'Infrastructure AI', color:'#6473A5', size:'sm', x:50, y:85 },
+    { id:'nexgiga', label:'NexGiga', sub:'Parent Ecosystem', color:'#192D78', size:'lg', x:50, y:10 },
+    { id:'buildmate', label:'BuildMate', sub:'Execution Arm', color:'#C8281E', size:'md', x:20, y:55 },
+    { id:'nexbuild', label:'NexBuild', sub:'Construction Tech', color:'#192D78', size:'md', x:50, y:55 },
+    { id:'nextech', label:'NexTech', sub:'Digital Solutions', color:'#192D78', size:'md', x:80, y:55 },
+    { id:'smart', label:'Smart Infra', sub:'Infrastructure AI', color:'#10245F', size:'sm', x:50, y:85 },
   ]
   return (
     <section className="py-24 bg-navy-950 relative overflow-hidden">
@@ -747,16 +747,16 @@ function NexGigaSection() {
             </div>
             {/* Connector lines */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
-              <line x1="50%" y1="100" x2="22%" y2="210" stroke="rgba(35,60,130,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
-              <line x1="50%" y1="100" x2="50%" y2="210" stroke="rgba(35,60,130,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
-              <line x1="50%" y1="100" x2="78%" y2="210" stroke="rgba(35,60,130,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
+              <line x1="50%" y1="100" x2="22%" y2="210" stroke="rgba(25,45,120,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
+              <line x1="50%" y1="100" x2="50%" y2="210" stroke="rgba(25,45,120,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
+              <line x1="50%" y1="100" x2="78%" y2="210" stroke="rgba(25,45,120,0.4)" strokeWidth="1" strokeDasharray="4,4"/>
             </svg>
             {/* Child nodes */}
             <div className="absolute bottom-8 left-0 right-0 flex justify-around px-4">
               {[
-                {label:'BuildMate', sub:'Execution', color:'#D72D23'},
-                {label:'NexBuild', sub:'Construction', color:'#465A96'},
-                {label:'NexTech', sub:'Digital', color:'#6473A5'},
+                {label:'BuildMate', sub:'Execution', color:'#C8281E'},
+                {label:'NexBuild', sub:'Construction', color:'#192D78'},
+                {label:'NexTech', sub:'Digital', color:'#192D78'},
               ].map(n => (
                 <div key={n.label} className="flex flex-col items-center gap-1">
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center border-2 shadow-lg"
