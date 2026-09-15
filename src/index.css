@@ -99,4 +99,76 @@ section[aria-label="Hero banner"] > .absolute.rounded-full.pointer-events-none {
 section[aria-label="Hero banner"] .section-title span[style] { color: var(--bm-blue) !important; }
 section[aria-label="Hero banner"] .transition-colors { transition-property: background-color,color,border-color !important; }
 section[aria-label="Hero banner"] .transition-colors:hover { background-color: rgba(var(--bm-blue-rgb),0.04) !important; }
+
+/* ── Physical booth hierarchy: WHITE canvas / RED structure / BLUE identity ── */
+/* Dark engineering sections are retained only for the hero. All other page sections
+   become bright exhibition-style surfaces while existing components, spacing and motion stay intact. */
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-950"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-900"] {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  color: var(--bm-text);
+}
+main > section:not([aria-label="Hero banner"])[class*="from-navy-"],
+main > section:not([aria-label="Hero banner"])[class*="to-navy-"],
+main > section:not([aria-label="Hero banner"])[class*="via-navy-"] {
+  background-image: none !important;
+  background-color: #FFFFFF !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .section-title,
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] h1,
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] h2,
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] h3,
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] h4 {
+  color: var(--bm-deep-blue) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] p,
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .text-slate-300,
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .text-slate-400 {
+  color: var(--bm-muted) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .text-white {
+  color: var(--bm-deep-blue) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="bg-navy-800"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="bg-navy-700"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="bg-navy-900"] {
+  background-color: #F7F8FA !important;
+  background-image: none !important;
+  border-color: var(--bm-border) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="border-white"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="divide-white"] {
+  border-color: var(--bm-border) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="text-accent"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="text-blue-"] {
+  color: var(--bm-blue) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="text-green-"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="border-green-"] {
+  color: var(--bm-blue) !important;
+  border-color: rgba(var(--bm-blue-rgb),0.20) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="bg-green-"] {
+  background-color: rgba(var(--bm-blue-rgb),0.06) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="border-red"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="bg-red-"] {
+  border-color: rgba(var(--bm-red-rgb),0.28) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .bg-grid,
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .bg-grid-sm {
+  background-image: linear-gradient(rgba(var(--bm-blue-rgb),0.055) 1px, transparent 1px), linear-gradient(90deg,rgba(var(--bm-blue-rgb),0.055) 1px,transparent 1px) !important;
+}
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] img {
+  border-color: var(--bm-border);
+}
+
+/* Red as structural/attention accent rather than a competing page background. */
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .section-label::before { background: var(--bm-red) !important; }
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] .section-label { color: var(--bm-red) !important; }
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="bg-red-600"],
+main > section:not([aria-label="Hero banner"])[class*="bg-navy-"] [class*="bg-red-700"] { background-color: var(--bm-red) !important; }
+
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
